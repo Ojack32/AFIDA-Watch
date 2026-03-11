@@ -1,0 +1,8 @@
+Flag,Class,Count,Pct_of_Total,Weight,Rationale
+FLAG_adversary_nation,Risk,173,0.35,3,Direct adversary nation ownership by country code
+FLAG_secondary_any,Risk,9,0.02,3,Secondary interest in adversary nation field
+FLAG_ambiguity,Risk,1519,3.07,2,Ambiguous country code requiring enhanced diligence
+FLAG_trust_beneficiary,Risk,170,0.34,2,Trust beneficiary proxy ownership indicator
+FLAG_leasehold,Risk,28439,57.4,2,Long-term leasehold indirect control indicator
+FLAG_foreign_owner,Exposure,40794,82.33,1,Foreign owner under AFIDA reporting logic
+FLAG_foreign_citizenship,Exposure,16583,33.47,1,Non-US citizenship indicator

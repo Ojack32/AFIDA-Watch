@@ -1,0 +1,1523 @@
+Mar 04 18:19:38 srv1388219 gunicorn[862]: [2026-03-04 18:19:38 +0000] [862] [ERROR] Exception in worker process
+Mar 04 18:19:38 srv1388219 gunicorn[862]: Traceback (most recent call last):
+Mar 04 18:19:38 srv1388219 gunicorn[862]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+Mar 04 18:19:38 srv1388219 gunicorn[862]:     worker.init_process()
+Mar 04 18:19:38 srv1388219 gunicorn[862]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Mar 04 18:19:38 srv1388219 gunicorn[862]:     self.load_wsgi()
+Mar 04 18:19:38 srv1388219 gunicorn[862]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Mar 04 18:19:38 srv1388219 gunicorn[862]:     self.wsgi = self.app.wsgi()
+Mar 04 18:19:38 srv1388219 gunicorn[862]:                 ^^^^^^^^^^^^^^^
+Mar 04 18:19:38 srv1388219 gunicorn[862]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Mar 04 18:19:38 srv1388219 gunicorn[862]:     self.callable = self.load()
+Mar 04 18:19:38 srv1388219 gunicorn[862]:                     ^^^^^^^^^^^
+Mar 04 18:19:38 srv1388219 gunicorn[862]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Mar 04 18:19:38 srv1388219 gunicorn[862]:     return self.load_wsgiapp()
+Mar 04 18:19:38 srv1388219 gunicorn[862]:            ^^^^^^^^^^^^^^^^^^^
+Mar 04 18:19:38 srv1388219 gunicorn[862]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Mar 04 18:19:38 srv1388219 gunicorn[862]:     return util.import_app(self.app_uri)
+Mar 04 18:19:38 srv1388219 gunicorn[862]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 18:19:38 srv1388219 gunicorn[862]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/util.py", line 371, in import_app
+Mar 04 18:19:38 srv1388219 gunicorn[862]:     mod = importlib.import_module(module)
+Mar 04 18:19:38 srv1388219 gunicorn[862]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 18:19:38 srv1388219 gunicorn[862]:   File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+Mar 04 18:19:38 srv1388219 gunicorn[862]:     return _bootstrap._gcd_import(name[level:], package, level)
+Mar 04 18:19:38 srv1388219 gunicorn[862]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 18:19:38 srv1388219 gunicorn[862]:   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Mar 04 18:19:38 srv1388219 gunicorn[862]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Mar 04 18:19:38 srv1388219 gunicorn[862]:   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+Mar 04 18:19:38 srv1388219 gunicorn[862]:   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+Mar 04 18:19:38 srv1388219 gunicorn[862]:   File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+Mar 04 18:19:38 srv1388219 gunicorn[862]:   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+Mar 04 18:19:38 srv1388219 gunicorn[862]:   File "/home/afida/apps/AFIDA-Watch/wsgi.py", line 1, in <module>
+Mar 04 18:19:38 srv1388219 gunicorn[862]:     from app import app
+Mar 04 18:19:38 srv1388219 gunicorn[862]: ImportError: cannot import name 'app' from 'app' (/home/afida/apps/AFIDA-Watch/app.py)
+Mar 04 18:19:38 srv1388219 gunicorn[862]: [2026-03-04 18:19:38 +0000] [862] [INFO] Worker exiting (pid: 862)
+Mar 04 18:19:38 srv1388219 gunicorn[861]: [2026-03-04 18:19:38 +0000] [861] [ERROR] Worker (pid:862) exited with code 3
+Mar 04 18:19:38 srv1388219 gunicorn[861]: [2026-03-04 18:19:38 +0000] [861] [ERROR] Shutting down: Master
+Mar 04 18:19:38 srv1388219 gunicorn[861]: [2026-03-04 18:19:38 +0000] [861] [ERROR] Reason: Worker failed to boot.
+Mar 04 18:19:38 srv1388219 systemd[1]: [0;1;39m[0;1;31m[0;1;39mafidawatch.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAn ExecStart= process belonging to unit afidawatch.service has exited.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 3.[0m
+Mar 04 18:19:38 srv1388219 systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mafidawatch.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit afidawatch.service has entered the 'failed' state with result 'exit-code'.[0m
+Mar 04 18:19:41 srv1388219 systemd[1]: afidawatch.service: Scheduled restart job, restart counter is at 2.
+[0;38;5;245m░░ [0m[0;32mSubject: Automatic restarting of a unit has been scheduled[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAutomatic restarting of the unit afidawatch.service has been scheduled, as the result for[0m
+[0;38;5;245m░░[0m [0;32mthe configured Restart= setting for the unit.[0m
+Mar 04 18:19:41 srv1388219 systemd[1]: Started afidawatch.service - AFIDA Watch (Gunicorn).
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit afidawatch.service has finished successfully[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit afidawatch.service has finished successfully.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 802.[0m
+Mar 04 18:19:41 srv1388219 gunicorn[864]: [2026-03-04 18:19:41 +0000] [864] [INFO] Starting gunicorn 21.2.0
+Mar 04 18:19:41 srv1388219 gunicorn[864]: [2026-03-04 18:19:41 +0000] [864] [INFO] Listening at: http://127.0.0.1:8000 (864)
+Mar 04 18:19:41 srv1388219 gunicorn[864]: [2026-03-04 18:19:41 +0000] [864] [INFO] Using worker: sync
+Mar 04 18:19:41 srv1388219 gunicorn[865]: [2026-03-04 18:19:41 +0000] [865] [INFO] Booting worker with pid: 865
+Mar 04 18:19:41 srv1388219 gunicorn[865]: [2026-03-04 18:19:41 +0000] [865] [ERROR] Exception in worker process
+Mar 04 18:19:41 srv1388219 gunicorn[865]: Traceback (most recent call last):
+Mar 04 18:19:41 srv1388219 gunicorn[865]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+Mar 04 18:19:41 srv1388219 gunicorn[865]:     worker.init_process()
+Mar 04 18:19:41 srv1388219 gunicorn[865]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Mar 04 18:19:41 srv1388219 gunicorn[865]:     self.load_wsgi()
+Mar 04 18:19:41 srv1388219 gunicorn[865]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Mar 04 18:19:41 srv1388219 gunicorn[865]:     self.wsgi = self.app.wsgi()
+Mar 04 18:19:41 srv1388219 gunicorn[865]:                 ^^^^^^^^^^^^^^^
+Mar 04 18:19:41 srv1388219 gunicorn[865]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Mar 04 18:19:41 srv1388219 gunicorn[865]:     self.callable = self.load()
+Mar 04 18:19:41 srv1388219 gunicorn[865]:                     ^^^^^^^^^^^
+Mar 04 18:19:41 srv1388219 gunicorn[865]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Mar 04 18:19:41 srv1388219 gunicorn[865]:     return self.load_wsgiapp()
+Mar 04 18:19:41 srv1388219 gunicorn[865]:            ^^^^^^^^^^^^^^^^^^^
+Mar 04 18:19:41 srv1388219 gunicorn[865]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Mar 04 18:19:41 srv1388219 gunicorn[865]:     return util.import_app(self.app_uri)
+Mar 04 18:19:41 srv1388219 gunicorn[865]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 18:19:41 srv1388219 gunicorn[865]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/util.py", line 371, in import_app
+Mar 04 18:19:41 srv1388219 gunicorn[865]:     mod = importlib.import_module(module)
+Mar 04 18:19:41 srv1388219 gunicorn[865]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 18:19:41 srv1388219 gunicorn[865]:   File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+Mar 04 18:19:41 srv1388219 gunicorn[865]:     return _bootstrap._gcd_import(name[level:], package, level)
+Mar 04 18:19:41 srv1388219 gunicorn[865]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 18:19:41 srv1388219 gunicorn[865]:   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Mar 04 18:19:41 srv1388219 gunicorn[865]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Mar 04 18:19:41 srv1388219 gunicorn[865]:   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+Mar 04 18:19:41 srv1388219 gunicorn[865]:   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+Mar 04 18:19:41 srv1388219 gunicorn[865]:   File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+Mar 04 18:19:41 srv1388219 gunicorn[865]:   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+Mar 04 18:19:41 srv1388219 gunicorn[865]:   File "/home/afida/apps/AFIDA-Watch/wsgi.py", line 1, in <module>
+Mar 04 18:19:41 srv1388219 gunicorn[865]:     from app import app
+Mar 04 18:19:41 srv1388219 gunicorn[865]: ImportError: cannot import name 'app' from 'app' (/home/afida/apps/AFIDA-Watch/app.py)
+Mar 04 18:19:41 srv1388219 gunicorn[865]: [2026-03-04 18:19:41 +0000] [865] [INFO] Worker exiting (pid: 865)
+Mar 04 18:19:41 srv1388219 gunicorn[864]: [2026-03-04 18:19:41 +0000] [864] [ERROR] Worker (pid:865) exited with code 3
+Mar 04 18:19:41 srv1388219 gunicorn[864]: [2026-03-04 18:19:41 +0000] [864] [ERROR] Shutting down: Master
+Mar 04 18:19:41 srv1388219 gunicorn[864]: [2026-03-04 18:19:41 +0000] [864] [ERROR] Reason: Worker failed to boot.
+Mar 04 18:19:41 srv1388219 systemd[1]: [0;1;39m[0;1;31m[0;1;39mafidawatch.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAn ExecStart= process belonging to unit afidawatch.service has exited.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 3.[0m
+Mar 04 18:19:41 srv1388219 systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mafidawatch.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit afidawatch.service has entered the 'failed' state with result 'exit-code'.[0m
+Mar 04 18:19:45 srv1388219 systemd[1]: afidawatch.service: Scheduled restart job, restart counter is at 3.
+[0;38;5;245m░░ [0m[0;32mSubject: Automatic restarting of a unit has been scheduled[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAutomatic restarting of the unit afidawatch.service has been scheduled, as the result for[0m
+[0;38;5;245m░░[0m [0;32mthe configured Restart= setting for the unit.[0m
+Mar 04 18:19:45 srv1388219 systemd[1]: Started afidawatch.service - AFIDA Watch (Gunicorn).
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit afidawatch.service has finished successfully[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit afidawatch.service has finished successfully.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 916.[0m
+Mar 04 18:19:45 srv1388219 gunicorn[868]: [2026-03-04 18:19:45 +0000] [868] [INFO] Starting gunicorn 21.2.0
+Mar 04 18:19:45 srv1388219 gunicorn[868]: [2026-03-04 18:19:45 +0000] [868] [INFO] Listening at: http://127.0.0.1:8000 (868)
+Mar 04 18:19:45 srv1388219 gunicorn[868]: [2026-03-04 18:19:45 +0000] [868] [INFO] Using worker: sync
+Mar 04 18:19:45 srv1388219 gunicorn[869]: [2026-03-04 18:19:45 +0000] [869] [INFO] Booting worker with pid: 869
+Mar 04 18:19:45 srv1388219 gunicorn[869]: [2026-03-04 18:19:45 +0000] [869] [ERROR] Exception in worker process
+Mar 04 18:19:45 srv1388219 gunicorn[869]: Traceback (most recent call last):
+Mar 04 18:19:45 srv1388219 gunicorn[869]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+Mar 04 18:19:45 srv1388219 gunicorn[869]:     worker.init_process()
+Mar 04 18:19:45 srv1388219 gunicorn[869]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Mar 04 18:19:45 srv1388219 gunicorn[869]:     self.load_wsgi()
+Mar 04 18:19:45 srv1388219 gunicorn[869]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Mar 04 18:19:45 srv1388219 gunicorn[869]:     self.wsgi = self.app.wsgi()
+Mar 04 18:19:45 srv1388219 gunicorn[869]:                 ^^^^^^^^^^^^^^^
+Mar 04 18:19:45 srv1388219 gunicorn[869]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Mar 04 18:19:45 srv1388219 gunicorn[869]:     self.callable = self.load()
+Mar 04 18:19:45 srv1388219 gunicorn[869]:                     ^^^^^^^^^^^
+Mar 04 18:19:45 srv1388219 gunicorn[869]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Mar 04 18:19:45 srv1388219 gunicorn[869]:     return self.load_wsgiapp()
+Mar 04 18:19:45 srv1388219 gunicorn[869]:            ^^^^^^^^^^^^^^^^^^^
+Mar 04 18:19:45 srv1388219 gunicorn[869]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Mar 04 18:19:45 srv1388219 gunicorn[869]:     return util.import_app(self.app_uri)
+Mar 04 18:19:45 srv1388219 gunicorn[869]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 18:19:45 srv1388219 gunicorn[869]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/util.py", line 371, in import_app
+Mar 04 18:19:45 srv1388219 gunicorn[869]:     mod = importlib.import_module(module)
+Mar 04 18:19:45 srv1388219 gunicorn[869]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 18:19:45 srv1388219 gunicorn[869]:   File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+Mar 04 18:19:45 srv1388219 gunicorn[869]:     return _bootstrap._gcd_import(name[level:], package, level)
+Mar 04 18:19:45 srv1388219 gunicorn[869]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 18:19:45 srv1388219 gunicorn[869]:   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Mar 04 18:19:45 srv1388219 gunicorn[869]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Mar 04 18:19:45 srv1388219 gunicorn[869]:   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+Mar 04 18:19:45 srv1388219 gunicorn[869]:   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+Mar 04 18:19:45 srv1388219 gunicorn[869]:   File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+Mar 04 18:19:45 srv1388219 gunicorn[869]:   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+Mar 04 18:19:45 srv1388219 gunicorn[869]:   File "/home/afida/apps/AFIDA-Watch/wsgi.py", line 1, in <module>
+Mar 04 18:19:45 srv1388219 gunicorn[869]:     from app import app
+Mar 04 18:19:45 srv1388219 gunicorn[869]: ImportError: cannot import name 'app' from 'app' (/home/afida/apps/AFIDA-Watch/app.py)
+Mar 04 18:19:45 srv1388219 gunicorn[869]: [2026-03-04 18:19:45 +0000] [869] [INFO] Worker exiting (pid: 869)
+Mar 04 18:19:45 srv1388219 gunicorn[868]: [2026-03-04 18:19:45 +0000] [868] [ERROR] Worker (pid:869) exited with code 3
+Mar 04 18:19:45 srv1388219 gunicorn[868]: [2026-03-04 18:19:45 +0000] [868] [ERROR] Shutting down: Master
+Mar 04 18:19:45 srv1388219 gunicorn[868]: [2026-03-04 18:19:45 +0000] [868] [ERROR] Reason: Worker failed to boot.
+Mar 04 18:19:45 srv1388219 systemd[1]: [0;1;39m[0;1;31m[0;1;39mafidawatch.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAn ExecStart= process belonging to unit afidawatch.service has exited.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 3.[0m
+Mar 04 18:19:45 srv1388219 systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mafidawatch.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit afidawatch.service has entered the 'failed' state with result 'exit-code'.[0m
+Mar 04 18:19:48 srv1388219 systemd[1]: afidawatch.service: Scheduled restart job, restart counter is at 4.
+[0;38;5;245m░░ [0m[0;32mSubject: Automatic restarting of a unit has been scheduled[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAutomatic restarting of the unit afidawatch.service has been scheduled, as the result for[0m
+[0;38;5;245m░░[0m [0;32mthe configured Restart= setting for the unit.[0m
+Mar 04 18:19:48 srv1388219 systemd[1]: Started afidawatch.service - AFIDA Watch (Gunicorn).
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit afidawatch.service has finished successfully[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit afidawatch.service has finished successfully.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 1030.[0m
+Mar 04 18:19:48 srv1388219 gunicorn[871]: [2026-03-04 18:19:48 +0000] [871] [INFO] Starting gunicorn 21.2.0
+Mar 04 18:19:48 srv1388219 gunicorn[871]: [2026-03-04 18:19:48 +0000] [871] [INFO] Listening at: http://127.0.0.1:8000 (871)
+Mar 04 18:19:48 srv1388219 gunicorn[871]: [2026-03-04 18:19:48 +0000] [871] [INFO] Using worker: sync
+Mar 04 18:19:48 srv1388219 gunicorn[872]: [2026-03-04 18:19:48 +0000] [872] [INFO] Booting worker with pid: 872
+Mar 04 18:19:48 srv1388219 gunicorn[872]: [2026-03-04 18:19:48 +0000] [872] [ERROR] Exception in worker process
+Mar 04 18:19:48 srv1388219 gunicorn[872]: Traceback (most recent call last):
+Mar 04 18:19:48 srv1388219 gunicorn[872]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+Mar 04 18:19:48 srv1388219 gunicorn[872]:     worker.init_process()
+Mar 04 18:19:48 srv1388219 gunicorn[872]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Mar 04 18:19:48 srv1388219 gunicorn[872]:     self.load_wsgi()
+Mar 04 18:19:48 srv1388219 gunicorn[872]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Mar 04 18:19:48 srv1388219 gunicorn[872]:     self.wsgi = self.app.wsgi()
+Mar 04 18:19:48 srv1388219 gunicorn[872]:                 ^^^^^^^^^^^^^^^
+Mar 04 18:19:48 srv1388219 gunicorn[872]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Mar 04 18:19:48 srv1388219 gunicorn[872]:     self.callable = self.load()
+Mar 04 18:19:48 srv1388219 gunicorn[872]:                     ^^^^^^^^^^^
+Mar 04 18:19:48 srv1388219 gunicorn[872]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Mar 04 18:19:48 srv1388219 gunicorn[872]:     return self.load_wsgiapp()
+Mar 04 18:19:48 srv1388219 gunicorn[872]:            ^^^^^^^^^^^^^^^^^^^
+Mar 04 18:19:48 srv1388219 gunicorn[872]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Mar 04 18:19:48 srv1388219 gunicorn[872]:     return util.import_app(self.app_uri)
+Mar 04 18:19:48 srv1388219 gunicorn[872]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 18:19:48 srv1388219 gunicorn[872]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/util.py", line 371, in import_app
+Mar 04 18:19:48 srv1388219 gunicorn[872]:     mod = importlib.import_module(module)
+Mar 04 18:19:48 srv1388219 gunicorn[872]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 18:19:48 srv1388219 gunicorn[872]:   File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+Mar 04 18:19:48 srv1388219 gunicorn[872]:     return _bootstrap._gcd_import(name[level:], package, level)
+Mar 04 18:19:48 srv1388219 gunicorn[872]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 18:19:48 srv1388219 gunicorn[872]:   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Mar 04 18:19:48 srv1388219 gunicorn[872]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Mar 04 18:19:48 srv1388219 gunicorn[872]:   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+Mar 04 18:19:48 srv1388219 gunicorn[872]:   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+Mar 04 18:19:48 srv1388219 gunicorn[872]:   File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+Mar 04 18:19:48 srv1388219 gunicorn[872]:   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+Mar 04 18:19:48 srv1388219 gunicorn[872]:   File "/home/afida/apps/AFIDA-Watch/wsgi.py", line 1, in <module>
+Mar 04 18:19:48 srv1388219 gunicorn[872]:     from app import app
+Mar 04 18:19:48 srv1388219 gunicorn[872]: ImportError: cannot import name 'app' from 'app' (/home/afida/apps/AFIDA-Watch/app.py)
+Mar 04 18:19:48 srv1388219 gunicorn[872]: [2026-03-04 18:19:48 +0000] [872] [INFO] Worker exiting (pid: 872)
+Mar 04 18:19:48 srv1388219 gunicorn[871]: [2026-03-04 18:19:48 +0000] [871] [ERROR] Worker (pid:872) exited with code 3
+Mar 04 18:19:48 srv1388219 gunicorn[871]: [2026-03-04 18:19:48 +0000] [871] [ERROR] Shutting down: Master
+Mar 04 18:19:48 srv1388219 gunicorn[871]: [2026-03-04 18:19:48 +0000] [871] [ERROR] Reason: Worker failed to boot.
+Mar 04 18:19:48 srv1388219 systemd[1]: [0;1;39m[0;1;31m[0;1;39mafidawatch.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAn ExecStart= process belonging to unit afidawatch.service has exited.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 3.[0m
+Mar 04 18:19:48 srv1388219 systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mafidawatch.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit afidawatch.service has entered the 'failed' state with result 'exit-code'.[0m
+Mar 04 18:19:51 srv1388219 systemd[1]: afidawatch.service: Scheduled restart job, restart counter is at 5.
+[0;38;5;245m░░ [0m[0;32mSubject: Automatic restarting of a unit has been scheduled[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAutomatic restarting of the unit afidawatch.service has been scheduled, as the result for[0m
+[0;38;5;245m░░[0m [0;32mthe configured Restart= setting for the unit.[0m
+Mar 04 18:19:51 srv1388219 systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mafidawatch.service: Start request repeated too quickly.[0m
+Mar 04 18:19:51 srv1388219 systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mafidawatch.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit afidawatch.service has entered the 'failed' state with result 'exit-code'.[0m
+Mar 04 18:19:51 srv1388219 systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start afidawatch.service - AFIDA Watch (Gunicorn).[0m
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit afidawatch.service has failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit afidawatch.service has finished with a failure.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 1144 and the job result is failed.[0m
+Mar 04 18:46:13 srv1388219 systemd[1]: Started afidawatch.service - AFIDA Watch (Gunicorn).
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit afidawatch.service has finished successfully[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit afidawatch.service has finished successfully.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 1956.[0m
+Mar 04 18:46:13 srv1388219 gunicorn[1434]: [2026-03-04 18:46:13 +0000] [1434] [INFO] Starting gunicorn 21.2.0
+Mar 04 18:46:13 srv1388219 gunicorn[1434]: [2026-03-04 18:46:13 +0000] [1434] [INFO] Listening at: http://127.0.0.1:8000 (1434)
+Mar 04 18:46:13 srv1388219 gunicorn[1434]: [2026-03-04 18:46:13 +0000] [1434] [INFO] Using worker: sync
+Mar 04 18:46:13 srv1388219 gunicorn[1438]: [2026-03-04 18:46:13 +0000] [1438] [INFO] Booting worker with pid: 1438
+Mar 04 18:46:13 srv1388219 gunicorn[1438]: [2026-03-04 18:46:13 +0000] [1438] [ERROR] Exception in worker process
+Mar 04 18:46:13 srv1388219 gunicorn[1438]: Traceback (most recent call last):
+Mar 04 18:46:13 srv1388219 gunicorn[1438]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+Mar 04 18:46:13 srv1388219 gunicorn[1438]:     worker.init_process()
+Mar 04 18:46:13 srv1388219 gunicorn[1438]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Mar 04 18:46:13 srv1388219 gunicorn[1438]:     self.load_wsgi()
+Mar 04 18:46:13 srv1388219 gunicorn[1438]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Mar 04 18:46:13 srv1388219 gunicorn[1438]:     self.wsgi = self.app.wsgi()
+Mar 04 18:46:13 srv1388219 gunicorn[1438]:                 ^^^^^^^^^^^^^^^
+Mar 04 18:46:13 srv1388219 gunicorn[1438]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Mar 04 18:46:13 srv1388219 gunicorn[1438]:     self.callable = self.load()
+Mar 04 18:46:13 srv1388219 gunicorn[1438]:                     ^^^^^^^^^^^
+Mar 04 18:46:13 srv1388219 gunicorn[1438]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Mar 04 18:46:13 srv1388219 gunicorn[1438]:     return self.load_wsgiapp()
+Mar 04 18:46:13 srv1388219 gunicorn[1438]:            ^^^^^^^^^^^^^^^^^^^
+Mar 04 18:46:13 srv1388219 gunicorn[1438]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Mar 04 18:46:13 srv1388219 gunicorn[1438]:     return util.import_app(self.app_uri)
+Mar 04 18:46:13 srv1388219 gunicorn[1438]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 18:46:13 srv1388219 gunicorn[1438]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/util.py", line 371, in import_app
+Mar 04 18:46:13 srv1388219 gunicorn[1438]:     mod = importlib.import_module(module)
+Mar 04 18:46:13 srv1388219 gunicorn[1438]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 18:46:13 srv1388219 gunicorn[1438]:   File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+Mar 04 18:46:13 srv1388219 gunicorn[1438]:     return _bootstrap._gcd_import(name[level:], package, level)
+Mar 04 18:46:13 srv1388219 gunicorn[1438]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 18:46:13 srv1388219 gunicorn[1438]:   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Mar 04 18:46:13 srv1388219 gunicorn[1438]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Mar 04 18:46:13 srv1388219 gunicorn[1438]:   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+Mar 04 18:46:13 srv1388219 gunicorn[1438]:   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+Mar 04 18:46:13 srv1388219 gunicorn[1438]:   File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+Mar 04 18:46:13 srv1388219 gunicorn[1438]:   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+Mar 04 18:46:13 srv1388219 gunicorn[1438]:   File "/home/afida/apps/AFIDA-Watch/wsgi.py", line 1, in <module>
+Mar 04 18:46:13 srv1388219 gunicorn[1438]:     from app import app
+Mar 04 18:46:13 srv1388219 gunicorn[1438]: ImportError: cannot import name 'app' from 'app' (/home/afida/apps/AFIDA-Watch/app.py)
+Mar 04 18:46:13 srv1388219 gunicorn[1438]: [2026-03-04 18:46:13 +0000] [1438] [INFO] Worker exiting (pid: 1438)
+Mar 04 18:46:13 srv1388219 gunicorn[1434]: [2026-03-04 18:46:13 +0000] [1434] [ERROR] Worker (pid:1438) exited with code 3
+Mar 04 18:46:13 srv1388219 gunicorn[1434]: [2026-03-04 18:46:13 +0000] [1434] [ERROR] Shutting down: Master
+Mar 04 18:46:13 srv1388219 gunicorn[1434]: [2026-03-04 18:46:13 +0000] [1434] [ERROR] Reason: Worker failed to boot.
+Mar 04 18:46:13 srv1388219 systemd[1]: [0;1;39m[0;1;31m[0;1;39mafidawatch.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAn ExecStart= process belonging to unit afidawatch.service has exited.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 3.[0m
+Mar 04 18:46:13 srv1388219 systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mafidawatch.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit afidawatch.service has entered the 'failed' state with result 'exit-code'.[0m
+Mar 04 18:46:16 srv1388219 systemd[1]: afidawatch.service: Scheduled restart job, restart counter is at 1.
+[0;38;5;245m░░ [0m[0;32mSubject: Automatic restarting of a unit has been scheduled[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAutomatic restarting of the unit afidawatch.service has been scheduled, as the result for[0m
+[0;38;5;245m░░[0m [0;32mthe configured Restart= setting for the unit.[0m
+Mar 04 18:46:16 srv1388219 systemd[1]: Started afidawatch.service - AFIDA Watch (Gunicorn).
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit afidawatch.service has finished successfully[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit afidawatch.service has finished successfully.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 2070.[0m
+Mar 04 18:46:16 srv1388219 gunicorn[1443]: [2026-03-04 18:46:16 +0000] [1443] [INFO] Starting gunicorn 21.2.0
+Mar 04 18:46:16 srv1388219 gunicorn[1443]: [2026-03-04 18:46:16 +0000] [1443] [INFO] Listening at: http://127.0.0.1:8000 (1443)
+Mar 04 18:46:16 srv1388219 gunicorn[1443]: [2026-03-04 18:46:16 +0000] [1443] [INFO] Using worker: sync
+Mar 04 18:46:16 srv1388219 gunicorn[1444]: [2026-03-04 18:46:16 +0000] [1444] [INFO] Booting worker with pid: 1444
+Mar 04 18:46:16 srv1388219 gunicorn[1444]: [2026-03-04 18:46:16 +0000] [1444] [ERROR] Exception in worker process
+Mar 04 18:46:16 srv1388219 gunicorn[1444]: Traceback (most recent call last):
+Mar 04 18:46:16 srv1388219 gunicorn[1444]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+Mar 04 18:46:16 srv1388219 gunicorn[1444]:     worker.init_process()
+Mar 04 18:46:16 srv1388219 gunicorn[1444]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Mar 04 18:46:16 srv1388219 gunicorn[1444]:     self.load_wsgi()
+Mar 04 18:46:16 srv1388219 gunicorn[1444]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Mar 04 18:46:16 srv1388219 gunicorn[1444]:     self.wsgi = self.app.wsgi()
+Mar 04 18:46:16 srv1388219 gunicorn[1444]:                 ^^^^^^^^^^^^^^^
+Mar 04 18:46:16 srv1388219 gunicorn[1444]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Mar 04 18:46:16 srv1388219 gunicorn[1444]:     self.callable = self.load()
+Mar 04 18:46:16 srv1388219 gunicorn[1444]:                     ^^^^^^^^^^^
+Mar 04 18:46:16 srv1388219 gunicorn[1444]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Mar 04 18:46:16 srv1388219 gunicorn[1444]:     return self.load_wsgiapp()
+Mar 04 18:46:16 srv1388219 gunicorn[1444]:            ^^^^^^^^^^^^^^^^^^^
+Mar 04 18:46:16 srv1388219 gunicorn[1444]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Mar 04 18:46:16 srv1388219 gunicorn[1444]:     return util.import_app(self.app_uri)
+Mar 04 18:46:16 srv1388219 gunicorn[1444]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 18:46:16 srv1388219 gunicorn[1444]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/util.py", line 371, in import_app
+Mar 04 18:46:16 srv1388219 gunicorn[1444]:     mod = importlib.import_module(module)
+Mar 04 18:46:16 srv1388219 gunicorn[1444]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 18:46:16 srv1388219 gunicorn[1444]:   File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+Mar 04 18:46:16 srv1388219 gunicorn[1444]:     return _bootstrap._gcd_import(name[level:], package, level)
+Mar 04 18:46:16 srv1388219 gunicorn[1444]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 18:46:16 srv1388219 gunicorn[1444]:   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Mar 04 18:46:16 srv1388219 gunicorn[1444]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Mar 04 18:46:16 srv1388219 gunicorn[1444]:   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+Mar 04 18:46:16 srv1388219 gunicorn[1444]:   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+Mar 04 18:46:16 srv1388219 gunicorn[1444]:   File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+Mar 04 18:46:16 srv1388219 gunicorn[1444]:   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+Mar 04 18:46:16 srv1388219 gunicorn[1444]:   File "/home/afida/apps/AFIDA-Watch/wsgi.py", line 1, in <module>
+Mar 04 18:46:16 srv1388219 gunicorn[1444]:     from app import app
+Mar 04 18:46:16 srv1388219 gunicorn[1444]: ImportError: cannot import name 'app' from 'app' (/home/afida/apps/AFIDA-Watch/app.py)
+Mar 04 18:46:16 srv1388219 gunicorn[1444]: [2026-03-04 18:46:16 +0000] [1444] [INFO] Worker exiting (pid: 1444)
+Mar 04 18:46:16 srv1388219 gunicorn[1443]: [2026-03-04 18:46:16 +0000] [1443] [ERROR] Worker (pid:1444) exited with code 3
+Mar 04 18:46:16 srv1388219 gunicorn[1443]: [2026-03-04 18:46:16 +0000] [1443] [ERROR] Shutting down: Master
+Mar 04 18:46:16 srv1388219 gunicorn[1443]: [2026-03-04 18:46:16 +0000] [1443] [ERROR] Reason: Worker failed to boot.
+Mar 04 18:46:16 srv1388219 systemd[1]: [0;1;39m[0;1;31m[0;1;39mafidawatch.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAn ExecStart= process belonging to unit afidawatch.service has exited.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 3.[0m
+Mar 04 18:46:16 srv1388219 systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mafidawatch.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit afidawatch.service has entered the 'failed' state with result 'exit-code'.[0m
+Mar 04 18:46:19 srv1388219 systemd[1]: afidawatch.service: Scheduled restart job, restart counter is at 2.
+[0;38;5;245m░░ [0m[0;32mSubject: Automatic restarting of a unit has been scheduled[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAutomatic restarting of the unit afidawatch.service has been scheduled, as the result for[0m
+[0;38;5;245m░░[0m [0;32mthe configured Restart= setting for the unit.[0m
+Mar 04 18:46:19 srv1388219 systemd[1]: Started afidawatch.service - AFIDA Watch (Gunicorn).
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit afidawatch.service has finished successfully[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit afidawatch.service has finished successfully.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 2184.[0m
+Mar 04 18:46:20 srv1388219 gunicorn[1447]: [2026-03-04 18:46:20 +0000] [1447] [INFO] Starting gunicorn 21.2.0
+Mar 04 18:46:20 srv1388219 gunicorn[1447]: [2026-03-04 18:46:20 +0000] [1447] [INFO] Listening at: http://127.0.0.1:8000 (1447)
+Mar 04 18:46:20 srv1388219 gunicorn[1447]: [2026-03-04 18:46:20 +0000] [1447] [INFO] Using worker: sync
+Mar 04 18:46:20 srv1388219 gunicorn[1448]: [2026-03-04 18:46:20 +0000] [1448] [INFO] Booting worker with pid: 1448
+Mar 04 18:46:20 srv1388219 gunicorn[1448]: [2026-03-04 18:46:20 +0000] [1448] [ERROR] Exception in worker process
+Mar 04 18:46:20 srv1388219 gunicorn[1448]: Traceback (most recent call last):
+Mar 04 18:46:20 srv1388219 gunicorn[1448]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+Mar 04 18:46:20 srv1388219 gunicorn[1448]:     worker.init_process()
+Mar 04 18:46:20 srv1388219 gunicorn[1448]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Mar 04 18:46:20 srv1388219 gunicorn[1448]:     self.load_wsgi()
+Mar 04 18:46:20 srv1388219 gunicorn[1448]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Mar 04 18:46:20 srv1388219 gunicorn[1448]:     self.wsgi = self.app.wsgi()
+Mar 04 18:46:20 srv1388219 gunicorn[1448]:                 ^^^^^^^^^^^^^^^
+Mar 04 18:46:20 srv1388219 gunicorn[1448]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Mar 04 18:46:20 srv1388219 gunicorn[1448]:     self.callable = self.load()
+Mar 04 18:46:20 srv1388219 gunicorn[1448]:                     ^^^^^^^^^^^
+Mar 04 18:46:20 srv1388219 gunicorn[1448]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Mar 04 18:46:20 srv1388219 gunicorn[1448]:     return self.load_wsgiapp()
+Mar 04 18:46:20 srv1388219 gunicorn[1448]:            ^^^^^^^^^^^^^^^^^^^
+Mar 04 18:46:20 srv1388219 gunicorn[1448]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Mar 04 18:46:20 srv1388219 gunicorn[1448]:     return util.import_app(self.app_uri)
+Mar 04 18:46:20 srv1388219 gunicorn[1448]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 18:46:20 srv1388219 gunicorn[1448]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/util.py", line 371, in import_app
+Mar 04 18:46:20 srv1388219 gunicorn[1448]:     mod = importlib.import_module(module)
+Mar 04 18:46:20 srv1388219 gunicorn[1448]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 18:46:20 srv1388219 gunicorn[1448]:   File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+Mar 04 18:46:20 srv1388219 gunicorn[1448]:     return _bootstrap._gcd_import(name[level:], package, level)
+Mar 04 18:46:20 srv1388219 gunicorn[1448]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 18:46:20 srv1388219 gunicorn[1448]:   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Mar 04 18:46:20 srv1388219 gunicorn[1448]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Mar 04 18:46:20 srv1388219 gunicorn[1448]:   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+Mar 04 18:46:20 srv1388219 gunicorn[1448]:   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+Mar 04 18:46:20 srv1388219 gunicorn[1448]:   File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+Mar 04 18:46:20 srv1388219 gunicorn[1448]:   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+Mar 04 18:46:20 srv1388219 gunicorn[1448]:   File "/home/afida/apps/AFIDA-Watch/wsgi.py", line 1, in <module>
+Mar 04 18:46:20 srv1388219 gunicorn[1448]:     from app import app
+Mar 04 18:46:20 srv1388219 gunicorn[1448]: ImportError: cannot import name 'app' from 'app' (/home/afida/apps/AFIDA-Watch/app.py)
+Mar 04 18:46:20 srv1388219 gunicorn[1448]: [2026-03-04 18:46:20 +0000] [1448] [INFO] Worker exiting (pid: 1448)
+Mar 04 18:46:20 srv1388219 gunicorn[1449]: [2026-03-04 18:46:20 +0000] [1449] [INFO] Booting worker with pid: 1449
+Mar 04 18:46:20 srv1388219 gunicorn[1447]: [2026-03-04 18:46:20 +0000] [1447] [ERROR] Worker (pid:1448) exited with code 3
+Mar 04 18:46:20 srv1388219 gunicorn[1449]: [2026-03-04 18:46:20 +0000] [1449] [ERROR] Exception in worker process
+Mar 04 18:46:20 srv1388219 gunicorn[1449]: Traceback (most recent call last):
+Mar 04 18:46:20 srv1388219 gunicorn[1449]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+Mar 04 18:46:20 srv1388219 gunicorn[1449]:     worker.init_process()
+Mar 04 18:46:20 srv1388219 gunicorn[1449]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Mar 04 18:46:20 srv1388219 gunicorn[1449]:     self.load_wsgi()
+Mar 04 18:46:20 srv1388219 gunicorn[1449]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Mar 04 18:46:20 srv1388219 gunicorn[1449]:     self.wsgi = self.app.wsgi()
+Mar 04 18:46:20 srv1388219 gunicorn[1449]:                 ^^^^^^^^^^^^^^^
+Mar 04 18:46:20 srv1388219 gunicorn[1449]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Mar 04 18:46:20 srv1388219 gunicorn[1449]:     self.callable = self.load()
+Mar 04 18:46:20 srv1388219 gunicorn[1449]:                     ^^^^^^^^^^^
+Mar 04 18:46:20 srv1388219 gunicorn[1449]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Mar 04 18:46:20 srv1388219 gunicorn[1449]:     return self.load_wsgiapp()
+Mar 04 18:46:20 srv1388219 gunicorn[1449]:            ^^^^^^^^^^^^^^^^^^^
+Mar 04 18:46:20 srv1388219 gunicorn[1449]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Mar 04 18:46:20 srv1388219 gunicorn[1449]:     return util.import_app(self.app_uri)
+Mar 04 18:46:20 srv1388219 gunicorn[1449]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 18:46:20 srv1388219 gunicorn[1449]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/util.py", line 371, in import_app
+Mar 04 18:46:20 srv1388219 gunicorn[1449]:     mod = importlib.import_module(module)
+Mar 04 18:46:20 srv1388219 gunicorn[1449]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 18:46:20 srv1388219 gunicorn[1449]:   File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+Mar 04 18:46:20 srv1388219 gunicorn[1449]:     return _bootstrap._gcd_import(name[level:], package, level)
+Mar 04 18:46:20 srv1388219 gunicorn[1449]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 18:46:20 srv1388219 gunicorn[1449]:   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Mar 04 18:46:20 srv1388219 gunicorn[1449]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Mar 04 18:46:20 srv1388219 gunicorn[1449]:   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+Mar 04 18:46:20 srv1388219 gunicorn[1449]:   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+Mar 04 18:46:20 srv1388219 gunicorn[1449]:   File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+Mar 04 18:46:20 srv1388219 gunicorn[1449]:   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+Mar 04 18:46:20 srv1388219 gunicorn[1449]:   File "/home/afida/apps/AFIDA-Watch/wsgi.py", line 1, in <module>
+Mar 04 18:46:20 srv1388219 gunicorn[1449]:     from app import app
+Mar 04 18:46:20 srv1388219 gunicorn[1449]: ImportError: cannot import name 'app' from 'app' (/home/afida/apps/AFIDA-Watch/app.py)
+Mar 04 18:46:20 srv1388219 gunicorn[1449]: [2026-03-04 18:46:20 +0000] [1449] [INFO] Worker exiting (pid: 1449)
+Mar 04 18:46:20 srv1388219 gunicorn[1447]: [2026-03-04 18:46:20 +0000] [1447] [ERROR] Worker (pid:1449) exited with code 3
+Mar 04 18:46:20 srv1388219 gunicorn[1447]: Traceback (most recent call last):
+Mar 04 18:46:20 srv1388219 gunicorn[1447]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 202, in run
+Mar 04 18:46:20 srv1388219 gunicorn[1447]:     self.manage_workers()
+Mar 04 18:46:20 srv1388219 gunicorn[1447]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 571, in manage_workers
+Mar 04 18:46:20 srv1388219 gunicorn[1447]:     self.spawn_workers()
+Mar 04 18:46:20 srv1388219 gunicorn[1447]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 643, in spawn_workers
+Mar 04 18:46:20 srv1388219 gunicorn[1447]:     time.sleep(0.1 * random.random())
+Mar 04 18:46:20 srv1388219 gunicorn[1447]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+Mar 04 18:46:20 srv1388219 gunicorn[1447]:     self.reap_workers()
+Mar 04 18:46:20 srv1388219 gunicorn[1447]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 530, in reap_workers
+Mar 04 18:46:20 srv1388219 gunicorn[1447]:     raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+Mar 04 18:46:20 srv1388219 gunicorn[1447]: gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+Mar 04 18:46:20 srv1388219 gunicorn[1447]: During handling of the above exception, another exception occurred:
+Mar 04 18:46:20 srv1388219 gunicorn[1447]: Traceback (most recent call last):
+Mar 04 18:46:20 srv1388219 gunicorn[1447]:   File "/home/afida/apps/AFIDA-Watch/.venv/bin/gunicorn", line 6, in <module>
+Mar 04 18:46:20 srv1388219 gunicorn[1447]:     sys.exit(run())
+Mar 04 18:46:20 srv1388219 gunicorn[1447]:              ^^^^^
+Mar 04 18:46:20 srv1388219 gunicorn[1447]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 67, in run
+Mar 04 18:46:20 srv1388219 gunicorn[1447]:     WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+Mar 04 18:46:20 srv1388219 gunicorn[1447]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/base.py", line 236, in run
+Mar 04 18:46:20 srv1388219 gunicorn[1447]:     super().run()
+Mar 04 18:46:20 srv1388219 gunicorn[1447]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/base.py", line 72, in run
+Mar 04 18:46:20 srv1388219 gunicorn[1447]:     Arbiter(self).run()
+Mar 04 18:46:20 srv1388219 gunicorn[1447]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 229, in run
+Mar 04 18:46:20 srv1388219 gunicorn[1447]:     self.halt(reason=inst.reason, exit_status=inst.exit_status)
+Mar 04 18:46:20 srv1388219 gunicorn[1447]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 342, in halt
+Mar 04 18:46:20 srv1388219 gunicorn[1447]:     self.stop()
+Mar 04 18:46:20 srv1388219 gunicorn[1447]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 396, in stop
+Mar 04 18:46:20 srv1388219 gunicorn[1447]:     time.sleep(0.1)
+Mar 04 18:46:20 srv1388219 gunicorn[1447]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+Mar 04 18:46:20 srv1388219 gunicorn[1447]:     self.reap_workers()
+Mar 04 18:46:20 srv1388219 gunicorn[1447]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 530, in reap_workers
+Mar 04 18:46:20 srv1388219 gunicorn[1447]:     raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+Mar 04 18:46:20 srv1388219 gunicorn[1447]: gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+Mar 04 18:46:20 srv1388219 systemd[1]: [0;1;39m[0;1;31m[0;1;39mafidawatch.service: Main process exited, code=exited, status=1/FAILURE[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAn ExecStart= process belonging to unit afidawatch.service has exited.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 1.[0m
+Mar 04 18:46:20 srv1388219 systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mafidawatch.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit afidawatch.service has entered the 'failed' state with result 'exit-code'.[0m
+Mar 04 18:46:23 srv1388219 systemd[1]: afidawatch.service: Scheduled restart job, restart counter is at 3.
+[0;38;5;245m░░ [0m[0;32mSubject: Automatic restarting of a unit has been scheduled[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAutomatic restarting of the unit afidawatch.service has been scheduled, as the result for[0m
+[0;38;5;245m░░[0m [0;32mthe configured Restart= setting for the unit.[0m
+Mar 04 18:46:23 srv1388219 systemd[1]: Started afidawatch.service - AFIDA Watch (Gunicorn).
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit afidawatch.service has finished successfully[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit afidawatch.service has finished successfully.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 2298.[0m
+Mar 04 18:46:23 srv1388219 gunicorn[1453]: [2026-03-04 18:46:23 +0000] [1453] [INFO] Starting gunicorn 21.2.0
+Mar 04 18:46:23 srv1388219 gunicorn[1453]: [2026-03-04 18:46:23 +0000] [1453] [INFO] Listening at: http://127.0.0.1:8000 (1453)
+Mar 04 18:46:23 srv1388219 gunicorn[1453]: [2026-03-04 18:46:23 +0000] [1453] [INFO] Using worker: sync
+Mar 04 18:46:23 srv1388219 gunicorn[1454]: [2026-03-04 18:46:23 +0000] [1454] [INFO] Booting worker with pid: 1454
+Mar 04 18:46:23 srv1388219 gunicorn[1454]: [2026-03-04 18:46:23 +0000] [1454] [ERROR] Exception in worker process
+Mar 04 18:46:23 srv1388219 gunicorn[1454]: Traceback (most recent call last):
+Mar 04 18:46:23 srv1388219 gunicorn[1454]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+Mar 04 18:46:23 srv1388219 gunicorn[1454]:     worker.init_process()
+Mar 04 18:46:23 srv1388219 gunicorn[1454]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Mar 04 18:46:23 srv1388219 gunicorn[1454]:     self.load_wsgi()
+Mar 04 18:46:23 srv1388219 gunicorn[1454]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Mar 04 18:46:23 srv1388219 gunicorn[1454]:     self.wsgi = self.app.wsgi()
+Mar 04 18:46:23 srv1388219 gunicorn[1454]:                 ^^^^^^^^^^^^^^^
+Mar 04 18:46:23 srv1388219 gunicorn[1454]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Mar 04 18:46:23 srv1388219 gunicorn[1454]:     self.callable = self.load()
+Mar 04 18:46:23 srv1388219 gunicorn[1454]:                     ^^^^^^^^^^^
+Mar 04 18:46:23 srv1388219 gunicorn[1454]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Mar 04 18:46:23 srv1388219 gunicorn[1454]:     return self.load_wsgiapp()
+Mar 04 18:46:23 srv1388219 gunicorn[1454]:            ^^^^^^^^^^^^^^^^^^^
+Mar 04 18:46:23 srv1388219 gunicorn[1454]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Mar 04 18:46:23 srv1388219 gunicorn[1454]:     return util.import_app(self.app_uri)
+Mar 04 18:46:23 srv1388219 gunicorn[1454]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 18:46:23 srv1388219 gunicorn[1454]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/util.py", line 371, in import_app
+Mar 04 18:46:23 srv1388219 gunicorn[1454]:     mod = importlib.import_module(module)
+Mar 04 18:46:23 srv1388219 gunicorn[1454]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 18:46:23 srv1388219 gunicorn[1454]:   File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+Mar 04 18:46:23 srv1388219 gunicorn[1454]:     return _bootstrap._gcd_import(name[level:], package, level)
+Mar 04 18:46:23 srv1388219 gunicorn[1454]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 18:46:23 srv1388219 gunicorn[1454]:   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Mar 04 18:46:23 srv1388219 gunicorn[1454]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Mar 04 18:46:23 srv1388219 gunicorn[1454]:   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+Mar 04 18:46:23 srv1388219 gunicorn[1454]:   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+Mar 04 18:46:23 srv1388219 gunicorn[1454]:   File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+Mar 04 18:46:23 srv1388219 gunicorn[1454]:   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+Mar 04 18:46:23 srv1388219 gunicorn[1454]:   File "/home/afida/apps/AFIDA-Watch/wsgi.py", line 1, in <module>
+Mar 04 18:46:23 srv1388219 gunicorn[1454]:     from app import app
+Mar 04 18:46:23 srv1388219 gunicorn[1454]: ImportError: cannot import name 'app' from 'app' (/home/afida/apps/AFIDA-Watch/app.py)
+Mar 04 18:46:23 srv1388219 gunicorn[1454]: [2026-03-04 18:46:23 +0000] [1454] [INFO] Worker exiting (pid: 1454)
+Mar 04 18:46:23 srv1388219 gunicorn[1453]: [2026-03-04 18:46:23 +0000] [1453] [ERROR] Worker (pid:1454) exited with code 3
+Mar 04 18:46:23 srv1388219 gunicorn[1453]: [2026-03-04 18:46:23 +0000] [1453] [ERROR] Shutting down: Master
+Mar 04 18:46:23 srv1388219 gunicorn[1453]: [2026-03-04 18:46:23 +0000] [1453] [ERROR] Reason: Worker failed to boot.
+Mar 04 18:46:23 srv1388219 systemd[1]: [0;1;39m[0;1;31m[0;1;39mafidawatch.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAn ExecStart= process belonging to unit afidawatch.service has exited.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 3.[0m
+Mar 04 18:46:23 srv1388219 systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mafidawatch.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit afidawatch.service has entered the 'failed' state with result 'exit-code'.[0m
+Mar 04 18:46:26 srv1388219 systemd[1]: afidawatch.service: Scheduled restart job, restart counter is at 4.
+[0;38;5;245m░░ [0m[0;32mSubject: Automatic restarting of a unit has been scheduled[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAutomatic restarting of the unit afidawatch.service has been scheduled, as the result for[0m
+[0;38;5;245m░░[0m [0;32mthe configured Restart= setting for the unit.[0m
+Mar 04 18:46:26 srv1388219 systemd[1]: Started afidawatch.service - AFIDA Watch (Gunicorn).
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit afidawatch.service has finished successfully[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit afidawatch.service has finished successfully.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 2412.[0m
+Mar 04 18:46:26 srv1388219 gunicorn[1458]: [2026-03-04 18:46:26 +0000] [1458] [INFO] Starting gunicorn 21.2.0
+Mar 04 18:46:26 srv1388219 gunicorn[1458]: [2026-03-04 18:46:26 +0000] [1458] [INFO] Listening at: http://127.0.0.1:8000 (1458)
+Mar 04 18:46:26 srv1388219 gunicorn[1458]: [2026-03-04 18:46:26 +0000] [1458] [INFO] Using worker: sync
+Mar 04 18:46:26 srv1388219 gunicorn[1459]: [2026-03-04 18:46:26 +0000] [1459] [INFO] Booting worker with pid: 1459
+Mar 04 18:46:26 srv1388219 gunicorn[1459]: [2026-03-04 18:46:26 +0000] [1459] [ERROR] Exception in worker process
+Mar 04 18:46:26 srv1388219 gunicorn[1459]: Traceback (most recent call last):
+Mar 04 18:46:26 srv1388219 gunicorn[1459]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+Mar 04 18:46:26 srv1388219 gunicorn[1459]:     worker.init_process()
+Mar 04 18:46:26 srv1388219 gunicorn[1459]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Mar 04 18:46:26 srv1388219 gunicorn[1459]:     self.load_wsgi()
+Mar 04 18:46:26 srv1388219 gunicorn[1459]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Mar 04 18:46:26 srv1388219 gunicorn[1459]:     self.wsgi = self.app.wsgi()
+Mar 04 18:46:26 srv1388219 gunicorn[1459]:                 ^^^^^^^^^^^^^^^
+Mar 04 18:46:26 srv1388219 gunicorn[1459]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Mar 04 18:46:26 srv1388219 gunicorn[1459]:     self.callable = self.load()
+Mar 04 18:46:26 srv1388219 gunicorn[1459]:                     ^^^^^^^^^^^
+Mar 04 18:46:26 srv1388219 gunicorn[1459]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Mar 04 18:46:26 srv1388219 gunicorn[1459]:     return self.load_wsgiapp()
+Mar 04 18:46:26 srv1388219 gunicorn[1459]:            ^^^^^^^^^^^^^^^^^^^
+Mar 04 18:46:26 srv1388219 gunicorn[1459]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Mar 04 18:46:26 srv1388219 gunicorn[1459]:     return util.import_app(self.app_uri)
+Mar 04 18:46:26 srv1388219 gunicorn[1459]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 18:46:26 srv1388219 gunicorn[1459]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/util.py", line 371, in import_app
+Mar 04 18:46:26 srv1388219 gunicorn[1459]:     mod = importlib.import_module(module)
+Mar 04 18:46:26 srv1388219 gunicorn[1459]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 18:46:26 srv1388219 gunicorn[1459]:   File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+Mar 04 18:46:26 srv1388219 gunicorn[1459]:     return _bootstrap._gcd_import(name[level:], package, level)
+Mar 04 18:46:26 srv1388219 gunicorn[1459]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 18:46:26 srv1388219 gunicorn[1459]:   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Mar 04 18:46:26 srv1388219 gunicorn[1459]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Mar 04 18:46:26 srv1388219 gunicorn[1459]:   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+Mar 04 18:46:26 srv1388219 gunicorn[1459]:   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+Mar 04 18:46:26 srv1388219 gunicorn[1459]:   File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+Mar 04 18:46:26 srv1388219 gunicorn[1459]:   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+Mar 04 18:46:26 srv1388219 gunicorn[1459]:   File "/home/afida/apps/AFIDA-Watch/wsgi.py", line 1, in <module>
+Mar 04 18:46:26 srv1388219 gunicorn[1459]:     from app import app
+Mar 04 18:46:26 srv1388219 gunicorn[1459]: ImportError: cannot import name 'app' from 'app' (/home/afida/apps/AFIDA-Watch/app.py)
+Mar 04 18:46:26 srv1388219 gunicorn[1459]: [2026-03-04 18:46:26 +0000] [1459] [INFO] Worker exiting (pid: 1459)
+Mar 04 18:46:26 srv1388219 gunicorn[1458]: [2026-03-04 18:46:26 +0000] [1458] [ERROR] Worker (pid:1459) exited with code 3
+Mar 04 18:46:26 srv1388219 gunicorn[1458]: [2026-03-04 18:46:26 +0000] [1458] [ERROR] Shutting down: Master
+Mar 04 18:46:26 srv1388219 gunicorn[1458]: [2026-03-04 18:46:26 +0000] [1458] [ERROR] Reason: Worker failed to boot.
+Mar 04 18:46:26 srv1388219 systemd[1]: [0;1;39m[0;1;31m[0;1;39mafidawatch.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAn ExecStart= process belonging to unit afidawatch.service has exited.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 3.[0m
+Mar 04 18:46:26 srv1388219 systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mafidawatch.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit afidawatch.service has entered the 'failed' state with result 'exit-code'.[0m
+Mar 04 18:46:29 srv1388219 systemd[1]: afidawatch.service: Scheduled restart job, restart counter is at 5.
+[0;38;5;245m░░ [0m[0;32mSubject: Automatic restarting of a unit has been scheduled[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAutomatic restarting of the unit afidawatch.service has been scheduled, as the result for[0m
+[0;38;5;245m░░[0m [0;32mthe configured Restart= setting for the unit.[0m
+Mar 04 18:46:29 srv1388219 systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mafidawatch.service: Start request repeated too quickly.[0m
+Mar 04 18:46:29 srv1388219 systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mafidawatch.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit afidawatch.service has entered the 'failed' state with result 'exit-code'.[0m
+Mar 04 18:46:29 srv1388219 systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start afidawatch.service - AFIDA Watch (Gunicorn).[0m
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit afidawatch.service has failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit afidawatch.service has finished with a failure.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 2526 and the job result is failed.[0m
+Mar 04 19:40:55 srv1388219 systemd[1]: Started afidawatch.service - AFIDA Watch (Gunicorn).
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit afidawatch.service has finished successfully[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit afidawatch.service has finished successfully.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 3907.[0m
+Mar 04 19:40:55 srv1388219 gunicorn[2224]: [2026-03-04 19:40:55 +0000] [2224] [INFO] Starting gunicorn 21.2.0
+Mar 04 19:40:55 srv1388219 gunicorn[2224]: [2026-03-04 19:40:55 +0000] [2224] [INFO] Listening at: http://127.0.0.1:8000 (2224)
+Mar 04 19:40:55 srv1388219 gunicorn[2224]: [2026-03-04 19:40:55 +0000] [2224] [INFO] Using worker: sync
+Mar 04 19:40:55 srv1388219 gunicorn[2228]: [2026-03-04 19:40:55 +0000] [2228] [INFO] Booting worker with pid: 2228
+Mar 04 19:40:55 srv1388219 gunicorn[2228]: [2026-03-04 19:40:55 +0000] [2228] [ERROR] Exception in worker process
+Mar 04 19:40:55 srv1388219 gunicorn[2228]: Traceback (most recent call last):
+Mar 04 19:40:55 srv1388219 gunicorn[2228]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+Mar 04 19:40:55 srv1388219 gunicorn[2228]:     worker.init_process()
+Mar 04 19:40:55 srv1388219 gunicorn[2228]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Mar 04 19:40:55 srv1388219 gunicorn[2228]:     self.load_wsgi()
+Mar 04 19:40:55 srv1388219 gunicorn[2228]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Mar 04 19:40:55 srv1388219 gunicorn[2228]:     self.wsgi = self.app.wsgi()
+Mar 04 19:40:55 srv1388219 gunicorn[2228]:                 ^^^^^^^^^^^^^^^
+Mar 04 19:40:55 srv1388219 gunicorn[2228]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Mar 04 19:40:55 srv1388219 gunicorn[2228]:     self.callable = self.load()
+Mar 04 19:40:55 srv1388219 gunicorn[2228]:                     ^^^^^^^^^^^
+Mar 04 19:40:55 srv1388219 gunicorn[2228]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Mar 04 19:40:55 srv1388219 gunicorn[2228]:     return self.load_wsgiapp()
+Mar 04 19:40:55 srv1388219 gunicorn[2228]:            ^^^^^^^^^^^^^^^^^^^
+Mar 04 19:40:55 srv1388219 gunicorn[2228]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Mar 04 19:40:55 srv1388219 gunicorn[2228]:     return util.import_app(self.app_uri)
+Mar 04 19:40:55 srv1388219 gunicorn[2228]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 19:40:55 srv1388219 gunicorn[2228]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/util.py", line 371, in import_app
+Mar 04 19:40:55 srv1388219 gunicorn[2228]:     mod = importlib.import_module(module)
+Mar 04 19:40:55 srv1388219 gunicorn[2228]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 19:40:55 srv1388219 gunicorn[2228]:   File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+Mar 04 19:40:55 srv1388219 gunicorn[2228]:     return _bootstrap._gcd_import(name[level:], package, level)
+Mar 04 19:40:55 srv1388219 gunicorn[2228]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 19:40:55 srv1388219 gunicorn[2228]:   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Mar 04 19:40:55 srv1388219 gunicorn[2228]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Mar 04 19:40:55 srv1388219 gunicorn[2228]:   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+Mar 04 19:40:55 srv1388219 gunicorn[2228]:   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+Mar 04 19:40:55 srv1388219 gunicorn[2228]:   File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+Mar 04 19:40:55 srv1388219 gunicorn[2228]:   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+Mar 04 19:40:55 srv1388219 gunicorn[2228]:   File "/home/afida/apps/AFIDA-Watch/wsgi.py", line 1, in <module>
+Mar 04 19:40:55 srv1388219 gunicorn[2228]:     from app import app
+Mar 04 19:40:55 srv1388219 gunicorn[2228]:   File "/home/afida/apps/AFIDA-Watch/app.py", line 10
+Mar 04 19:40:55 srv1388219 gunicorn[2228]:     return False
+Mar 04 19:40:55 srv1388219 gunicorn[2228]:     ^^^^^^
+Mar 04 19:40:55 srv1388219 gunicorn[2228]: IndentationError: expected an indented block after 'if' statement on line 9
+Mar 04 19:40:55 srv1388219 gunicorn[2228]: [2026-03-04 19:40:55 +0000] [2228] [INFO] Worker exiting (pid: 2228)
+Mar 04 19:40:55 srv1388219 gunicorn[2224]: [2026-03-04 19:40:55 +0000] [2224] [ERROR] Worker (pid:2228) exited with code 3
+Mar 04 19:40:55 srv1388219 gunicorn[2224]: [2026-03-04 19:40:55 +0000] [2224] [ERROR] Shutting down: Master
+Mar 04 19:40:56 srv1388219 gunicorn[2224]: [2026-03-04 19:40:56 +0000] [2224] [ERROR] Reason: Worker failed to boot.
+Mar 04 19:40:56 srv1388219 systemd[1]: [0;1;39m[0;1;31m[0;1;39mafidawatch.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAn ExecStart= process belonging to unit afidawatch.service has exited.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 3.[0m
+Mar 04 19:40:56 srv1388219 systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mafidawatch.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit afidawatch.service has entered the 'failed' state with result 'exit-code'.[0m
+Mar 04 19:40:59 srv1388219 systemd[1]: afidawatch.service: Scheduled restart job, restart counter is at 1.
+[0;38;5;245m░░ [0m[0;32mSubject: Automatic restarting of a unit has been scheduled[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAutomatic restarting of the unit afidawatch.service has been scheduled, as the result for[0m
+[0;38;5;245m░░[0m [0;32mthe configured Restart= setting for the unit.[0m
+Mar 04 19:40:59 srv1388219 systemd[1]: Started afidawatch.service - AFIDA Watch (Gunicorn).
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit afidawatch.service has finished successfully[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit afidawatch.service has finished successfully.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 4021.[0m
+Mar 04 19:40:59 srv1388219 gunicorn[2230]: [2026-03-04 19:40:59 +0000] [2230] [INFO] Starting gunicorn 21.2.0
+Mar 04 19:40:59 srv1388219 gunicorn[2230]: [2026-03-04 19:40:59 +0000] [2230] [INFO] Listening at: http://127.0.0.1:8000 (2230)
+Mar 04 19:40:59 srv1388219 gunicorn[2230]: [2026-03-04 19:40:59 +0000] [2230] [INFO] Using worker: sync
+Mar 04 19:40:59 srv1388219 gunicorn[2231]: [2026-03-04 19:40:59 +0000] [2231] [INFO] Booting worker with pid: 2231
+Mar 04 19:40:59 srv1388219 gunicorn[2231]: [2026-03-04 19:40:59 +0000] [2231] [ERROR] Exception in worker process
+Mar 04 19:40:59 srv1388219 gunicorn[2231]: Traceback (most recent call last):
+Mar 04 19:40:59 srv1388219 gunicorn[2231]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+Mar 04 19:40:59 srv1388219 gunicorn[2231]:     worker.init_process()
+Mar 04 19:40:59 srv1388219 gunicorn[2231]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Mar 04 19:40:59 srv1388219 gunicorn[2231]:     self.load_wsgi()
+Mar 04 19:40:59 srv1388219 gunicorn[2231]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Mar 04 19:40:59 srv1388219 gunicorn[2231]:     self.wsgi = self.app.wsgi()
+Mar 04 19:40:59 srv1388219 gunicorn[2231]:                 ^^^^^^^^^^^^^^^
+Mar 04 19:40:59 srv1388219 gunicorn[2231]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Mar 04 19:40:59 srv1388219 gunicorn[2231]:     self.callable = self.load()
+Mar 04 19:40:59 srv1388219 gunicorn[2231]:                     ^^^^^^^^^^^
+Mar 04 19:40:59 srv1388219 gunicorn[2231]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Mar 04 19:40:59 srv1388219 gunicorn[2231]:     return self.load_wsgiapp()
+Mar 04 19:40:59 srv1388219 gunicorn[2231]:            ^^^^^^^^^^^^^^^^^^^
+Mar 04 19:40:59 srv1388219 gunicorn[2231]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Mar 04 19:40:59 srv1388219 gunicorn[2231]:     return util.import_app(self.app_uri)
+Mar 04 19:40:59 srv1388219 gunicorn[2231]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 19:40:59 srv1388219 gunicorn[2231]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/util.py", line 371, in import_app
+Mar 04 19:40:59 srv1388219 gunicorn[2231]:     mod = importlib.import_module(module)
+Mar 04 19:40:59 srv1388219 gunicorn[2231]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 19:40:59 srv1388219 gunicorn[2231]:   File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+Mar 04 19:40:59 srv1388219 gunicorn[2231]:     return _bootstrap._gcd_import(name[level:], package, level)
+Mar 04 19:40:59 srv1388219 gunicorn[2231]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 19:40:59 srv1388219 gunicorn[2231]:   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Mar 04 19:40:59 srv1388219 gunicorn[2231]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Mar 04 19:40:59 srv1388219 gunicorn[2231]:   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+Mar 04 19:40:59 srv1388219 gunicorn[2231]:   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+Mar 04 19:40:59 srv1388219 gunicorn[2231]:   File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+Mar 04 19:40:59 srv1388219 gunicorn[2231]:   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+Mar 04 19:40:59 srv1388219 gunicorn[2231]:   File "/home/afida/apps/AFIDA-Watch/wsgi.py", line 1, in <module>
+Mar 04 19:40:59 srv1388219 gunicorn[2231]:     from app import app
+Mar 04 19:40:59 srv1388219 gunicorn[2231]:   File "/home/afida/apps/AFIDA-Watch/app.py", line 10
+Mar 04 19:40:59 srv1388219 gunicorn[2231]:     return False
+Mar 04 19:40:59 srv1388219 gunicorn[2231]:     ^^^^^^
+Mar 04 19:40:59 srv1388219 gunicorn[2231]: IndentationError: expected an indented block after 'if' statement on line 9
+Mar 04 19:40:59 srv1388219 gunicorn[2231]: [2026-03-04 19:40:59 +0000] [2231] [INFO] Worker exiting (pid: 2231)
+Mar 04 19:40:59 srv1388219 gunicorn[2230]: [2026-03-04 19:40:59 +0000] [2230] [ERROR] Worker (pid:2231) exited with code 3
+Mar 04 19:40:59 srv1388219 gunicorn[2230]: [2026-03-04 19:40:59 +0000] [2230] [ERROR] Shutting down: Master
+Mar 04 19:40:59 srv1388219 gunicorn[2230]: [2026-03-04 19:40:59 +0000] [2230] [ERROR] Reason: Worker failed to boot.
+Mar 04 19:40:59 srv1388219 systemd[1]: [0;1;39m[0;1;31m[0;1;39mafidawatch.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAn ExecStart= process belonging to unit afidawatch.service has exited.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 3.[0m
+Mar 04 19:40:59 srv1388219 systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mafidawatch.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit afidawatch.service has entered the 'failed' state with result 'exit-code'.[0m
+Mar 04 19:41:02 srv1388219 systemd[1]: afidawatch.service: Scheduled restart job, restart counter is at 2.
+[0;38;5;245m░░ [0m[0;32mSubject: Automatic restarting of a unit has been scheduled[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAutomatic restarting of the unit afidawatch.service has been scheduled, as the result for[0m
+[0;38;5;245m░░[0m [0;32mthe configured Restart= setting for the unit.[0m
+Mar 04 19:41:02 srv1388219 systemd[1]: Started afidawatch.service - AFIDA Watch (Gunicorn).
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit afidawatch.service has finished successfully[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit afidawatch.service has finished successfully.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 4135.[0m
+Mar 04 19:41:02 srv1388219 gunicorn[2234]: [2026-03-04 19:41:02 +0000] [2234] [INFO] Starting gunicorn 21.2.0
+Mar 04 19:41:02 srv1388219 gunicorn[2234]: [2026-03-04 19:41:02 +0000] [2234] [INFO] Listening at: http://127.0.0.1:8000 (2234)
+Mar 04 19:41:02 srv1388219 gunicorn[2234]: [2026-03-04 19:41:02 +0000] [2234] [INFO] Using worker: sync
+Mar 04 19:41:02 srv1388219 gunicorn[2235]: [2026-03-04 19:41:02 +0000] [2235] [INFO] Booting worker with pid: 2235
+Mar 04 19:41:02 srv1388219 gunicorn[2235]: [2026-03-04 19:41:02 +0000] [2235] [ERROR] Exception in worker process
+Mar 04 19:41:02 srv1388219 gunicorn[2235]: Traceback (most recent call last):
+Mar 04 19:41:02 srv1388219 gunicorn[2235]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+Mar 04 19:41:02 srv1388219 gunicorn[2235]:     worker.init_process()
+Mar 04 19:41:02 srv1388219 gunicorn[2235]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Mar 04 19:41:02 srv1388219 gunicorn[2235]:     self.load_wsgi()
+Mar 04 19:41:02 srv1388219 gunicorn[2235]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Mar 04 19:41:02 srv1388219 gunicorn[2235]:     self.wsgi = self.app.wsgi()
+Mar 04 19:41:02 srv1388219 gunicorn[2235]:                 ^^^^^^^^^^^^^^^
+Mar 04 19:41:02 srv1388219 gunicorn[2235]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Mar 04 19:41:02 srv1388219 gunicorn[2235]:     self.callable = self.load()
+Mar 04 19:41:02 srv1388219 gunicorn[2235]:                     ^^^^^^^^^^^
+Mar 04 19:41:02 srv1388219 gunicorn[2235]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Mar 04 19:41:02 srv1388219 gunicorn[2235]:     return self.load_wsgiapp()
+Mar 04 19:41:02 srv1388219 gunicorn[2235]:            ^^^^^^^^^^^^^^^^^^^
+Mar 04 19:41:02 srv1388219 gunicorn[2235]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Mar 04 19:41:02 srv1388219 gunicorn[2235]:     return util.import_app(self.app_uri)
+Mar 04 19:41:02 srv1388219 gunicorn[2235]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 19:41:02 srv1388219 gunicorn[2235]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/util.py", line 371, in import_app
+Mar 04 19:41:02 srv1388219 gunicorn[2235]:     mod = importlib.import_module(module)
+Mar 04 19:41:02 srv1388219 gunicorn[2235]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 19:41:02 srv1388219 gunicorn[2235]:   File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+Mar 04 19:41:02 srv1388219 gunicorn[2235]:     return _bootstrap._gcd_import(name[level:], package, level)
+Mar 04 19:41:02 srv1388219 gunicorn[2235]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 19:41:02 srv1388219 gunicorn[2235]:   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Mar 04 19:41:02 srv1388219 gunicorn[2235]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Mar 04 19:41:02 srv1388219 gunicorn[2235]:   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+Mar 04 19:41:02 srv1388219 gunicorn[2235]:   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+Mar 04 19:41:02 srv1388219 gunicorn[2235]:   File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+Mar 04 19:41:02 srv1388219 gunicorn[2235]:   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+Mar 04 19:41:02 srv1388219 gunicorn[2235]:   File "/home/afida/apps/AFIDA-Watch/wsgi.py", line 1, in <module>
+Mar 04 19:41:02 srv1388219 gunicorn[2235]:     from app import app
+Mar 04 19:41:02 srv1388219 gunicorn[2235]:   File "/home/afida/apps/AFIDA-Watch/app.py", line 10
+Mar 04 19:41:02 srv1388219 gunicorn[2235]:     return False
+Mar 04 19:41:02 srv1388219 gunicorn[2235]:     ^^^^^^
+Mar 04 19:41:02 srv1388219 gunicorn[2235]: IndentationError: expected an indented block after 'if' statement on line 9
+Mar 04 19:41:02 srv1388219 gunicorn[2235]: [2026-03-04 19:41:02 +0000] [2235] [INFO] Worker exiting (pid: 2235)
+Mar 04 19:41:02 srv1388219 gunicorn[2234]: [2026-03-04 19:41:02 +0000] [2234] [ERROR] Worker (pid:2235) exited with code 3
+Mar 04 19:41:02 srv1388219 gunicorn[2234]: [2026-03-04 19:41:02 +0000] [2234] [ERROR] Shutting down: Master
+Mar 04 19:41:02 srv1388219 gunicorn[2234]: [2026-03-04 19:41:02 +0000] [2234] [ERROR] Reason: Worker failed to boot.
+Mar 04 19:41:02 srv1388219 systemd[1]: [0;1;39m[0;1;31m[0;1;39mafidawatch.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAn ExecStart= process belonging to unit afidawatch.service has exited.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 3.[0m
+Mar 04 19:41:02 srv1388219 systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mafidawatch.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit afidawatch.service has entered the 'failed' state with result 'exit-code'.[0m
+Mar 04 19:41:05 srv1388219 systemd[1]: afidawatch.service: Scheduled restart job, restart counter is at 3.
+[0;38;5;245m░░ [0m[0;32mSubject: Automatic restarting of a unit has been scheduled[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAutomatic restarting of the unit afidawatch.service has been scheduled, as the result for[0m
+[0;38;5;245m░░[0m [0;32mthe configured Restart= setting for the unit.[0m
+Mar 04 19:41:05 srv1388219 systemd[1]: Started afidawatch.service - AFIDA Watch (Gunicorn).
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit afidawatch.service has finished successfully[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit afidawatch.service has finished successfully.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 4249.[0m
+Mar 04 19:41:05 srv1388219 gunicorn[2237]: [2026-03-04 19:41:05 +0000] [2237] [INFO] Starting gunicorn 21.2.0
+Mar 04 19:41:05 srv1388219 gunicorn[2237]: [2026-03-04 19:41:05 +0000] [2237] [INFO] Listening at: http://127.0.0.1:8000 (2237)
+Mar 04 19:41:05 srv1388219 gunicorn[2237]: [2026-03-04 19:41:05 +0000] [2237] [INFO] Using worker: sync
+Mar 04 19:41:05 srv1388219 gunicorn[2238]: [2026-03-04 19:41:05 +0000] [2238] [INFO] Booting worker with pid: 2238
+Mar 04 19:41:05 srv1388219 gunicorn[2238]: [2026-03-04 19:41:05 +0000] [2238] [ERROR] Exception in worker process
+Mar 04 19:41:05 srv1388219 gunicorn[2238]: Traceback (most recent call last):
+Mar 04 19:41:05 srv1388219 gunicorn[2238]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+Mar 04 19:41:05 srv1388219 gunicorn[2238]:     worker.init_process()
+Mar 04 19:41:05 srv1388219 gunicorn[2238]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Mar 04 19:41:05 srv1388219 gunicorn[2238]:     self.load_wsgi()
+Mar 04 19:41:05 srv1388219 gunicorn[2238]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Mar 04 19:41:05 srv1388219 gunicorn[2238]:     self.wsgi = self.app.wsgi()
+Mar 04 19:41:05 srv1388219 gunicorn[2238]:                 ^^^^^^^^^^^^^^^
+Mar 04 19:41:05 srv1388219 gunicorn[2238]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Mar 04 19:41:05 srv1388219 gunicorn[2238]:     self.callable = self.load()
+Mar 04 19:41:05 srv1388219 gunicorn[2238]:                     ^^^^^^^^^^^
+Mar 04 19:41:05 srv1388219 gunicorn[2238]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Mar 04 19:41:05 srv1388219 gunicorn[2238]:     return self.load_wsgiapp()
+Mar 04 19:41:05 srv1388219 gunicorn[2238]:            ^^^^^^^^^^^^^^^^^^^
+Mar 04 19:41:05 srv1388219 gunicorn[2238]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Mar 04 19:41:05 srv1388219 gunicorn[2238]:     return util.import_app(self.app_uri)
+Mar 04 19:41:05 srv1388219 gunicorn[2238]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 19:41:05 srv1388219 gunicorn[2238]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/util.py", line 371, in import_app
+Mar 04 19:41:05 srv1388219 gunicorn[2238]:     mod = importlib.import_module(module)
+Mar 04 19:41:05 srv1388219 gunicorn[2238]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 19:41:05 srv1388219 gunicorn[2238]:   File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+Mar 04 19:41:05 srv1388219 gunicorn[2238]:     return _bootstrap._gcd_import(name[level:], package, level)
+Mar 04 19:41:05 srv1388219 gunicorn[2238]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 19:41:05 srv1388219 gunicorn[2238]:   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Mar 04 19:41:05 srv1388219 gunicorn[2238]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Mar 04 19:41:05 srv1388219 gunicorn[2238]:   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+Mar 04 19:41:05 srv1388219 gunicorn[2238]:   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+Mar 04 19:41:05 srv1388219 gunicorn[2238]:   File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+Mar 04 19:41:05 srv1388219 gunicorn[2238]:   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+Mar 04 19:41:05 srv1388219 gunicorn[2238]:   File "/home/afida/apps/AFIDA-Watch/wsgi.py", line 1, in <module>
+Mar 04 19:41:05 srv1388219 gunicorn[2238]:     from app import app
+Mar 04 19:41:05 srv1388219 gunicorn[2238]:   File "/home/afida/apps/AFIDA-Watch/app.py", line 10
+Mar 04 19:41:05 srv1388219 gunicorn[2238]:     return False
+Mar 04 19:41:05 srv1388219 gunicorn[2238]:     ^^^^^^
+Mar 04 19:41:05 srv1388219 gunicorn[2238]: IndentationError: expected an indented block after 'if' statement on line 9
+Mar 04 19:41:05 srv1388219 gunicorn[2238]: [2026-03-04 19:41:05 +0000] [2238] [INFO] Worker exiting (pid: 2238)
+Mar 04 19:41:05 srv1388219 gunicorn[2239]: [2026-03-04 19:41:05 +0000] [2239] [INFO] Booting worker with pid: 2239
+Mar 04 19:41:05 srv1388219 gunicorn[2239]: [2026-03-04 19:41:05 +0000] [2239] [ERROR] Exception in worker process
+Mar 04 19:41:05 srv1388219 gunicorn[2239]: Traceback (most recent call last):
+Mar 04 19:41:05 srv1388219 gunicorn[2239]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+Mar 04 19:41:05 srv1388219 gunicorn[2239]:     worker.init_process()
+Mar 04 19:41:05 srv1388219 gunicorn[2239]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Mar 04 19:41:05 srv1388219 gunicorn[2239]:     self.load_wsgi()
+Mar 04 19:41:05 srv1388219 gunicorn[2239]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Mar 04 19:41:05 srv1388219 gunicorn[2239]:     self.wsgi = self.app.wsgi()
+Mar 04 19:41:05 srv1388219 gunicorn[2239]:                 ^^^^^^^^^^^^^^^
+Mar 04 19:41:05 srv1388219 gunicorn[2239]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Mar 04 19:41:05 srv1388219 gunicorn[2239]:     self.callable = self.load()
+Mar 04 19:41:05 srv1388219 gunicorn[2239]:                     ^^^^^^^^^^^
+Mar 04 19:41:05 srv1388219 gunicorn[2239]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Mar 04 19:41:05 srv1388219 gunicorn[2239]:     return self.load_wsgiapp()
+Mar 04 19:41:05 srv1388219 gunicorn[2239]:            ^^^^^^^^^^^^^^^^^^^
+Mar 04 19:41:05 srv1388219 gunicorn[2239]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Mar 04 19:41:05 srv1388219 gunicorn[2239]:     return util.import_app(self.app_uri)
+Mar 04 19:41:05 srv1388219 gunicorn[2239]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 19:41:05 srv1388219 gunicorn[2239]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/util.py", line 371, in import_app
+Mar 04 19:41:05 srv1388219 gunicorn[2239]:     mod = importlib.import_module(module)
+Mar 04 19:41:05 srv1388219 gunicorn[2239]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 19:41:05 srv1388219 gunicorn[2239]:   File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+Mar 04 19:41:05 srv1388219 gunicorn[2239]:     return _bootstrap._gcd_import(name[level:], package, level)
+Mar 04 19:41:05 srv1388219 gunicorn[2239]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 19:41:05 srv1388219 gunicorn[2239]:   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Mar 04 19:41:05 srv1388219 gunicorn[2239]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Mar 04 19:41:05 srv1388219 gunicorn[2239]:   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+Mar 04 19:41:05 srv1388219 gunicorn[2239]:   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+Mar 04 19:41:05 srv1388219 gunicorn[2239]:   File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+Mar 04 19:41:05 srv1388219 gunicorn[2239]:   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+Mar 04 19:41:05 srv1388219 gunicorn[2239]:   File "/home/afida/apps/AFIDA-Watch/wsgi.py", line 1, in <module>
+Mar 04 19:41:05 srv1388219 gunicorn[2239]:     from app import app
+Mar 04 19:41:05 srv1388219 gunicorn[2239]:   File "/home/afida/apps/AFIDA-Watch/app.py", line 10
+Mar 04 19:41:05 srv1388219 gunicorn[2239]:     return False
+Mar 04 19:41:05 srv1388219 gunicorn[2239]:     ^^^^^^
+Mar 04 19:41:05 srv1388219 gunicorn[2239]: IndentationError: expected an indented block after 'if' statement on line 9
+Mar 04 19:41:05 srv1388219 gunicorn[2239]: [2026-03-04 19:41:05 +0000] [2239] [INFO] Worker exiting (pid: 2239)
+Mar 04 19:41:05 srv1388219 gunicorn[2237]: [2026-03-04 19:41:05 +0000] [2237] [ERROR] Worker (pid:2238) exited with code 3
+Mar 04 19:41:05 srv1388219 gunicorn[2237]: [2026-03-04 19:41:05 +0000] [2237] [ERROR] Worker (pid:2239) was sent SIGTERM!
+Mar 04 19:41:05 srv1388219 gunicorn[2237]: [2026-03-04 19:41:05 +0000] [2237] [ERROR] Shutting down: Master
+Mar 04 19:41:05 srv1388219 gunicorn[2237]: [2026-03-04 19:41:05 +0000] [2237] [ERROR] Reason: Worker failed to boot.
+Mar 04 19:41:05 srv1388219 systemd[1]: [0;1;39m[0;1;31m[0;1;39mafidawatch.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAn ExecStart= process belonging to unit afidawatch.service has exited.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 3.[0m
+Mar 04 19:41:05 srv1388219 systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mafidawatch.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit afidawatch.service has entered the 'failed' state with result 'exit-code'.[0m
+Mar 04 19:41:09 srv1388219 systemd[1]: afidawatch.service: Scheduled restart job, restart counter is at 4.
+[0;38;5;245m░░ [0m[0;32mSubject: Automatic restarting of a unit has been scheduled[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAutomatic restarting of the unit afidawatch.service has been scheduled, as the result for[0m
+[0;38;5;245m░░[0m [0;32mthe configured Restart= setting for the unit.[0m
+Mar 04 19:41:09 srv1388219 systemd[1]: Started afidawatch.service - AFIDA Watch (Gunicorn).
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit afidawatch.service has finished successfully[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit afidawatch.service has finished successfully.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 4363.[0m
+Mar 04 19:41:09 srv1388219 gunicorn[2241]: [2026-03-04 19:41:09 +0000] [2241] [INFO] Starting gunicorn 21.2.0
+Mar 04 19:41:09 srv1388219 gunicorn[2241]: [2026-03-04 19:41:09 +0000] [2241] [INFO] Listening at: http://127.0.0.1:8000 (2241)
+Mar 04 19:41:09 srv1388219 gunicorn[2241]: [2026-03-04 19:41:09 +0000] [2241] [INFO] Using worker: sync
+Mar 04 19:41:09 srv1388219 gunicorn[2242]: [2026-03-04 19:41:09 +0000] [2242] [INFO] Booting worker with pid: 2242
+Mar 04 19:41:09 srv1388219 gunicorn[2242]: [2026-03-04 19:41:09 +0000] [2242] [ERROR] Exception in worker process
+Mar 04 19:41:09 srv1388219 gunicorn[2242]: Traceback (most recent call last):
+Mar 04 19:41:09 srv1388219 gunicorn[2242]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+Mar 04 19:41:09 srv1388219 gunicorn[2242]:     worker.init_process()
+Mar 04 19:41:09 srv1388219 gunicorn[2242]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Mar 04 19:41:09 srv1388219 gunicorn[2242]:     self.load_wsgi()
+Mar 04 19:41:09 srv1388219 gunicorn[2242]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Mar 04 19:41:09 srv1388219 gunicorn[2242]:     self.wsgi = self.app.wsgi()
+Mar 04 19:41:09 srv1388219 gunicorn[2242]:                 ^^^^^^^^^^^^^^^
+Mar 04 19:41:09 srv1388219 gunicorn[2242]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Mar 04 19:41:09 srv1388219 gunicorn[2242]:     self.callable = self.load()
+Mar 04 19:41:09 srv1388219 gunicorn[2242]:                     ^^^^^^^^^^^
+Mar 04 19:41:09 srv1388219 gunicorn[2242]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Mar 04 19:41:09 srv1388219 gunicorn[2242]:     return self.load_wsgiapp()
+Mar 04 19:41:09 srv1388219 gunicorn[2242]:            ^^^^^^^^^^^^^^^^^^^
+Mar 04 19:41:09 srv1388219 gunicorn[2242]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Mar 04 19:41:09 srv1388219 gunicorn[2242]:     return util.import_app(self.app_uri)
+Mar 04 19:41:09 srv1388219 gunicorn[2242]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 19:41:09 srv1388219 gunicorn[2242]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/util.py", line 371, in import_app
+Mar 04 19:41:09 srv1388219 gunicorn[2242]:     mod = importlib.import_module(module)
+Mar 04 19:41:09 srv1388219 gunicorn[2242]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 19:41:09 srv1388219 gunicorn[2242]:   File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+Mar 04 19:41:09 srv1388219 gunicorn[2242]:     return _bootstrap._gcd_import(name[level:], package, level)
+Mar 04 19:41:09 srv1388219 gunicorn[2242]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 19:41:09 srv1388219 gunicorn[2242]:   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Mar 04 19:41:09 srv1388219 gunicorn[2242]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Mar 04 19:41:09 srv1388219 gunicorn[2242]:   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+Mar 04 19:41:09 srv1388219 gunicorn[2242]:   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+Mar 04 19:41:09 srv1388219 gunicorn[2242]:   File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+Mar 04 19:41:09 srv1388219 gunicorn[2242]:   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+Mar 04 19:41:09 srv1388219 gunicorn[2242]:   File "/home/afida/apps/AFIDA-Watch/wsgi.py", line 1, in <module>
+Mar 04 19:41:09 srv1388219 gunicorn[2242]:     from app import app
+Mar 04 19:41:09 srv1388219 gunicorn[2242]:   File "/home/afida/apps/AFIDA-Watch/app.py", line 10
+Mar 04 19:41:09 srv1388219 gunicorn[2242]:     return False
+Mar 04 19:41:09 srv1388219 gunicorn[2242]:     ^^^^^^
+Mar 04 19:41:09 srv1388219 gunicorn[2242]: IndentationError: expected an indented block after 'if' statement on line 9
+Mar 04 19:41:09 srv1388219 gunicorn[2242]: [2026-03-04 19:41:09 +0000] [2242] [INFO] Worker exiting (pid: 2242)
+Mar 04 19:41:09 srv1388219 gunicorn[2241]: [2026-03-04 19:41:09 +0000] [2241] [ERROR] Worker (pid:2242) exited with code 3
+Mar 04 19:41:09 srv1388219 gunicorn[2241]: [2026-03-04 19:41:09 +0000] [2241] [ERROR] Shutting down: Master
+Mar 04 19:41:09 srv1388219 gunicorn[2241]: [2026-03-04 19:41:09 +0000] [2241] [ERROR] Reason: Worker failed to boot.
+Mar 04 19:41:09 srv1388219 systemd[1]: [0;1;39m[0;1;31m[0;1;39mafidawatch.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAn ExecStart= process belonging to unit afidawatch.service has exited.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 3.[0m
+Mar 04 19:41:09 srv1388219 systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mafidawatch.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit afidawatch.service has entered the 'failed' state with result 'exit-code'.[0m
+Mar 04 19:41:12 srv1388219 systemd[1]: afidawatch.service: Scheduled restart job, restart counter is at 5.
+[0;38;5;245m░░ [0m[0;32mSubject: Automatic restarting of a unit has been scheduled[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAutomatic restarting of the unit afidawatch.service has been scheduled, as the result for[0m
+[0;38;5;245m░░[0m [0;32mthe configured Restart= setting for the unit.[0m
+Mar 04 19:41:12 srv1388219 systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mafidawatch.service: Start request repeated too quickly.[0m
+Mar 04 19:41:12 srv1388219 systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mafidawatch.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit afidawatch.service has entered the 'failed' state with result 'exit-code'.[0m
+Mar 04 19:41:12 srv1388219 systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start afidawatch.service - AFIDA Watch (Gunicorn).[0m
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit afidawatch.service has failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit afidawatch.service has finished with a failure.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 4477 and the job result is failed.[0m
+Mar 04 20:56:42 srv1388219 systemd[1]: Started afidawatch.service - AFIDA Watch (Gunicorn).
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit afidawatch.service has finished successfully[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit afidawatch.service has finished successfully.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 5854.[0m
+Mar 04 20:56:42 srv1388219 gunicorn[2587]: [2026-03-04 20:56:42 +0000] [2587] [INFO] Starting gunicorn 21.2.0
+Mar 04 20:56:42 srv1388219 gunicorn[2587]: [2026-03-04 20:56:42 +0000] [2587] [INFO] Listening at: http://127.0.0.1:8000 (2587)
+Mar 04 20:56:42 srv1388219 gunicorn[2587]: [2026-03-04 20:56:42 +0000] [2587] [INFO] Using worker: sync
+Mar 04 20:56:42 srv1388219 gunicorn[2596]: [2026-03-04 20:56:42 +0000] [2596] [INFO] Booting worker with pid: 2596
+Mar 04 20:56:42 srv1388219 gunicorn[2596]: [2026-03-04 20:56:42 +0000] [2596] [ERROR] Exception in worker process
+Mar 04 20:56:42 srv1388219 gunicorn[2596]: Traceback (most recent call last):
+Mar 04 20:56:42 srv1388219 gunicorn[2596]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+Mar 04 20:56:42 srv1388219 gunicorn[2596]:     worker.init_process()
+Mar 04 20:56:42 srv1388219 gunicorn[2596]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Mar 04 20:56:42 srv1388219 gunicorn[2596]:     self.load_wsgi()
+Mar 04 20:56:42 srv1388219 gunicorn[2596]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Mar 04 20:56:42 srv1388219 gunicorn[2596]:     self.wsgi = self.app.wsgi()
+Mar 04 20:56:42 srv1388219 gunicorn[2596]:                 ^^^^^^^^^^^^^^^
+Mar 04 20:56:42 srv1388219 gunicorn[2596]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Mar 04 20:56:42 srv1388219 gunicorn[2596]:     self.callable = self.load()
+Mar 04 20:56:42 srv1388219 gunicorn[2596]:                     ^^^^^^^^^^^
+Mar 04 20:56:42 srv1388219 gunicorn[2596]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Mar 04 20:56:42 srv1388219 gunicorn[2596]:     return self.load_wsgiapp()
+Mar 04 20:56:42 srv1388219 gunicorn[2596]:            ^^^^^^^^^^^^^^^^^^^
+Mar 04 20:56:42 srv1388219 gunicorn[2596]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Mar 04 20:56:42 srv1388219 gunicorn[2596]:     return util.import_app(self.app_uri)
+Mar 04 20:56:42 srv1388219 gunicorn[2596]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 20:56:42 srv1388219 gunicorn[2596]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/util.py", line 371, in import_app
+Mar 04 20:56:42 srv1388219 gunicorn[2596]:     mod = importlib.import_module(module)
+Mar 04 20:56:42 srv1388219 gunicorn[2596]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 20:56:42 srv1388219 gunicorn[2596]:   File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+Mar 04 20:56:42 srv1388219 gunicorn[2596]:     return _bootstrap._gcd_import(name[level:], package, level)
+Mar 04 20:56:42 srv1388219 gunicorn[2596]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 20:56:42 srv1388219 gunicorn[2596]:   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Mar 04 20:56:42 srv1388219 gunicorn[2596]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Mar 04 20:56:42 srv1388219 gunicorn[2596]:   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+Mar 04 20:56:42 srv1388219 gunicorn[2596]:   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+Mar 04 20:56:42 srv1388219 gunicorn[2596]:   File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+Mar 04 20:56:42 srv1388219 gunicorn[2596]:   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+Mar 04 20:56:42 srv1388219 gunicorn[2596]:   File "/home/afida/apps/AFIDA-Watch/wsgi.py", line 1, in <module>
+Mar 04 20:56:42 srv1388219 gunicorn[2596]:     from app import app
+Mar 04 20:56:42 srv1388219 gunicorn[2596]:   File "/home/afida/apps/AFIDA-Watch/app.py", line 21
+Mar 04 20:56:42 srv1388219 gunicorn[2596]:     files = sorted(
+Mar 04 20:56:42 srv1388219 gunicorn[2596]:     ^^^^^
+Mar 04 20:56:42 srv1388219 gunicorn[2596]: IndentationError: expected an indented block after 'if' statement on line 20
+Mar 04 20:56:42 srv1388219 gunicorn[2596]: [2026-03-04 20:56:42 +0000] [2596] [INFO] Worker exiting (pid: 2596)
+Mar 04 20:56:42 srv1388219 gunicorn[2587]: [2026-03-04 20:56:42 +0000] [2587] [ERROR] Worker (pid:2596) exited with code 3
+Mar 04 20:56:42 srv1388219 gunicorn[2587]: [2026-03-04 20:56:42 +0000] [2587] [ERROR] Shutting down: Master
+Mar 04 20:56:42 srv1388219 gunicorn[2587]: [2026-03-04 20:56:42 +0000] [2587] [ERROR] Reason: Worker failed to boot.
+Mar 04 20:56:42 srv1388219 systemd[1]: [0;1;39m[0;1;31m[0;1;39mafidawatch.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAn ExecStart= process belonging to unit afidawatch.service has exited.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 3.[0m
+Mar 04 20:56:42 srv1388219 systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mafidawatch.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit afidawatch.service has entered the 'failed' state with result 'exit-code'.[0m
+Mar 04 20:56:45 srv1388219 systemd[1]: afidawatch.service: Scheduled restart job, restart counter is at 1.
+[0;38;5;245m░░ [0m[0;32mSubject: Automatic restarting of a unit has been scheduled[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAutomatic restarting of the unit afidawatch.service has been scheduled, as the result for[0m
+[0;38;5;245m░░[0m [0;32mthe configured Restart= setting for the unit.[0m
+Mar 04 20:56:45 srv1388219 systemd[1]: Started afidawatch.service - AFIDA Watch (Gunicorn).
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit afidawatch.service has finished successfully[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit afidawatch.service has finished successfully.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 6082.[0m
+Mar 04 20:56:45 srv1388219 gunicorn[2599]: [2026-03-04 20:56:45 +0000] [2599] [INFO] Starting gunicorn 21.2.0
+Mar 04 20:56:45 srv1388219 gunicorn[2599]: [2026-03-04 20:56:45 +0000] [2599] [INFO] Listening at: http://127.0.0.1:8000 (2599)
+Mar 04 20:56:45 srv1388219 gunicorn[2599]: [2026-03-04 20:56:45 +0000] [2599] [INFO] Using worker: sync
+Mar 04 20:56:45 srv1388219 gunicorn[2600]: [2026-03-04 20:56:45 +0000] [2600] [INFO] Booting worker with pid: 2600
+Mar 04 20:56:45 srv1388219 gunicorn[2600]: [2026-03-04 20:56:45 +0000] [2600] [ERROR] Exception in worker process
+Mar 04 20:56:45 srv1388219 gunicorn[2600]: Traceback (most recent call last):
+Mar 04 20:56:45 srv1388219 gunicorn[2600]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+Mar 04 20:56:45 srv1388219 gunicorn[2600]:     worker.init_process()
+Mar 04 20:56:45 srv1388219 gunicorn[2600]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Mar 04 20:56:45 srv1388219 gunicorn[2600]:     self.load_wsgi()
+Mar 04 20:56:45 srv1388219 gunicorn[2600]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Mar 04 20:56:45 srv1388219 gunicorn[2600]:     self.wsgi = self.app.wsgi()
+Mar 04 20:56:45 srv1388219 gunicorn[2600]:                 ^^^^^^^^^^^^^^^
+Mar 04 20:56:45 srv1388219 gunicorn[2600]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Mar 04 20:56:45 srv1388219 gunicorn[2600]:     self.callable = self.load()
+Mar 04 20:56:45 srv1388219 gunicorn[2600]:                     ^^^^^^^^^^^
+Mar 04 20:56:45 srv1388219 gunicorn[2600]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Mar 04 20:56:45 srv1388219 gunicorn[2600]:     return self.load_wsgiapp()
+Mar 04 20:56:45 srv1388219 gunicorn[2600]:            ^^^^^^^^^^^^^^^^^^^
+Mar 04 20:56:45 srv1388219 gunicorn[2600]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Mar 04 20:56:45 srv1388219 gunicorn[2600]:     return util.import_app(self.app_uri)
+Mar 04 20:56:45 srv1388219 gunicorn[2600]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 20:56:45 srv1388219 gunicorn[2600]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/util.py", line 371, in import_app
+Mar 04 20:56:45 srv1388219 gunicorn[2600]:     mod = importlib.import_module(module)
+Mar 04 20:56:45 srv1388219 gunicorn[2600]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 20:56:45 srv1388219 gunicorn[2600]:   File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+Mar 04 20:56:45 srv1388219 gunicorn[2600]:     return _bootstrap._gcd_import(name[level:], package, level)
+Mar 04 20:56:45 srv1388219 gunicorn[2600]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 20:56:45 srv1388219 gunicorn[2600]:   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Mar 04 20:56:45 srv1388219 gunicorn[2600]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Mar 04 20:56:45 srv1388219 gunicorn[2600]:   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+Mar 04 20:56:45 srv1388219 gunicorn[2600]:   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+Mar 04 20:56:45 srv1388219 gunicorn[2600]:   File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+Mar 04 20:56:45 srv1388219 gunicorn[2600]:   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+Mar 04 20:56:45 srv1388219 gunicorn[2600]:   File "/home/afida/apps/AFIDA-Watch/wsgi.py", line 1, in <module>
+Mar 04 20:56:45 srv1388219 gunicorn[2600]:     from app import app
+Mar 04 20:56:45 srv1388219 gunicorn[2600]:   File "/home/afida/apps/AFIDA-Watch/app.py", line 21
+Mar 04 20:56:45 srv1388219 gunicorn[2600]:     files = sorted(
+Mar 04 20:56:45 srv1388219 gunicorn[2600]:     ^^^^^
+Mar 04 20:56:45 srv1388219 gunicorn[2600]: IndentationError: expected an indented block after 'if' statement on line 20
+Mar 04 20:56:45 srv1388219 gunicorn[2600]: [2026-03-04 20:56:45 +0000] [2600] [INFO] Worker exiting (pid: 2600)
+Mar 04 20:56:45 srv1388219 gunicorn[2599]: [2026-03-04 20:56:45 +0000] [2599] [ERROR] Worker (pid:2600) exited with code 3
+Mar 04 20:56:45 srv1388219 gunicorn[2599]: [2026-03-04 20:56:45 +0000] [2599] [ERROR] Shutting down: Master
+Mar 04 20:56:45 srv1388219 gunicorn[2599]: [2026-03-04 20:56:45 +0000] [2599] [ERROR] Reason: Worker failed to boot.
+Mar 04 20:56:45 srv1388219 systemd[1]: [0;1;39m[0;1;31m[0;1;39mafidawatch.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAn ExecStart= process belonging to unit afidawatch.service has exited.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 3.[0m
+Mar 04 20:56:45 srv1388219 systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mafidawatch.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit afidawatch.service has entered the 'failed' state with result 'exit-code'.[0m
+Mar 04 20:56:48 srv1388219 systemd[1]: afidawatch.service: Scheduled restart job, restart counter is at 2.
+[0;38;5;245m░░ [0m[0;32mSubject: Automatic restarting of a unit has been scheduled[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAutomatic restarting of the unit afidawatch.service has been scheduled, as the result for[0m
+[0;38;5;245m░░[0m [0;32mthe configured Restart= setting for the unit.[0m
+Mar 04 20:56:48 srv1388219 systemd[1]: Started afidawatch.service - AFIDA Watch (Gunicorn).
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit afidawatch.service has finished successfully[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit afidawatch.service has finished successfully.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 6196.[0m
+Mar 04 20:56:48 srv1388219 gunicorn[2603]: [2026-03-04 20:56:48 +0000] [2603] [INFO] Starting gunicorn 21.2.0
+Mar 04 20:56:48 srv1388219 gunicorn[2603]: [2026-03-04 20:56:48 +0000] [2603] [INFO] Listening at: http://127.0.0.1:8000 (2603)
+Mar 04 20:56:48 srv1388219 gunicorn[2603]: [2026-03-04 20:56:48 +0000] [2603] [INFO] Using worker: sync
+Mar 04 20:56:48 srv1388219 gunicorn[2604]: [2026-03-04 20:56:48 +0000] [2604] [INFO] Booting worker with pid: 2604
+Mar 04 20:56:48 srv1388219 gunicorn[2604]: [2026-03-04 20:56:48 +0000] [2604] [ERROR] Exception in worker process
+Mar 04 20:56:48 srv1388219 gunicorn[2604]: Traceback (most recent call last):
+Mar 04 20:56:48 srv1388219 gunicorn[2604]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+Mar 04 20:56:48 srv1388219 gunicorn[2604]:     worker.init_process()
+Mar 04 20:56:48 srv1388219 gunicorn[2604]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Mar 04 20:56:48 srv1388219 gunicorn[2604]:     self.load_wsgi()
+Mar 04 20:56:48 srv1388219 gunicorn[2604]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Mar 04 20:56:48 srv1388219 gunicorn[2604]:     self.wsgi = self.app.wsgi()
+Mar 04 20:56:48 srv1388219 gunicorn[2604]:                 ^^^^^^^^^^^^^^^
+Mar 04 20:56:48 srv1388219 gunicorn[2604]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Mar 04 20:56:48 srv1388219 gunicorn[2604]:     self.callable = self.load()
+Mar 04 20:56:48 srv1388219 gunicorn[2604]:                     ^^^^^^^^^^^
+Mar 04 20:56:48 srv1388219 gunicorn[2604]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Mar 04 20:56:48 srv1388219 gunicorn[2604]:     return self.load_wsgiapp()
+Mar 04 20:56:48 srv1388219 gunicorn[2604]:            ^^^^^^^^^^^^^^^^^^^
+Mar 04 20:56:48 srv1388219 gunicorn[2604]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Mar 04 20:56:48 srv1388219 gunicorn[2604]:     return util.import_app(self.app_uri)
+Mar 04 20:56:48 srv1388219 gunicorn[2604]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 20:56:48 srv1388219 gunicorn[2604]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/util.py", line 371, in import_app
+Mar 04 20:56:48 srv1388219 gunicorn[2604]:     mod = importlib.import_module(module)
+Mar 04 20:56:48 srv1388219 gunicorn[2604]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 20:56:48 srv1388219 gunicorn[2604]:   File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+Mar 04 20:56:48 srv1388219 gunicorn[2604]:     return _bootstrap._gcd_import(name[level:], package, level)
+Mar 04 20:56:48 srv1388219 gunicorn[2604]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 20:56:48 srv1388219 gunicorn[2604]:   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Mar 04 20:56:48 srv1388219 gunicorn[2604]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Mar 04 20:56:48 srv1388219 gunicorn[2604]:   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+Mar 04 20:56:48 srv1388219 gunicorn[2604]:   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+Mar 04 20:56:48 srv1388219 gunicorn[2604]:   File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+Mar 04 20:56:48 srv1388219 gunicorn[2604]:   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+Mar 04 20:56:48 srv1388219 gunicorn[2604]:   File "/home/afida/apps/AFIDA-Watch/wsgi.py", line 1, in <module>
+Mar 04 20:56:48 srv1388219 gunicorn[2604]:     from app import app
+Mar 04 20:56:48 srv1388219 gunicorn[2604]:   File "/home/afida/apps/AFIDA-Watch/app.py", line 21
+Mar 04 20:56:48 srv1388219 gunicorn[2604]:     files = sorted(
+Mar 04 20:56:48 srv1388219 gunicorn[2604]:     ^^^^^
+Mar 04 20:56:48 srv1388219 gunicorn[2604]: IndentationError: expected an indented block after 'if' statement on line 20
+Mar 04 20:56:48 srv1388219 gunicorn[2604]: [2026-03-04 20:56:48 +0000] [2604] [INFO] Worker exiting (pid: 2604)
+Mar 04 20:56:48 srv1388219 gunicorn[2603]: [2026-03-04 20:56:48 +0000] [2603] [ERROR] Worker (pid:2604) exited with code 3
+Mar 04 20:56:48 srv1388219 gunicorn[2603]: [2026-03-04 20:56:48 +0000] [2603] [ERROR] Shutting down: Master
+Mar 04 20:56:48 srv1388219 gunicorn[2603]: [2026-03-04 20:56:48 +0000] [2603] [ERROR] Reason: Worker failed to boot.
+Mar 04 20:56:48 srv1388219 systemd[1]: [0;1;39m[0;1;31m[0;1;39mafidawatch.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAn ExecStart= process belonging to unit afidawatch.service has exited.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 3.[0m
+Mar 04 20:56:48 srv1388219 systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mafidawatch.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit afidawatch.service has entered the 'failed' state with result 'exit-code'.[0m
+Mar 04 20:56:51 srv1388219 systemd[1]: afidawatch.service: Scheduled restart job, restart counter is at 3.
+[0;38;5;245m░░ [0m[0;32mSubject: Automatic restarting of a unit has been scheduled[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAutomatic restarting of the unit afidawatch.service has been scheduled, as the result for[0m
+[0;38;5;245m░░[0m [0;32mthe configured Restart= setting for the unit.[0m
+Mar 04 20:56:51 srv1388219 systemd[1]: Started afidawatch.service - AFIDA Watch (Gunicorn).
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit afidawatch.service has finished successfully[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit afidawatch.service has finished successfully.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 6310.[0m
+Mar 04 20:56:52 srv1388219 gunicorn[2608]: [2026-03-04 20:56:52 +0000] [2608] [INFO] Starting gunicorn 21.2.0
+Mar 04 20:56:52 srv1388219 gunicorn[2608]: [2026-03-04 20:56:52 +0000] [2608] [INFO] Listening at: http://127.0.0.1:8000 (2608)
+Mar 04 20:56:52 srv1388219 gunicorn[2608]: [2026-03-04 20:56:52 +0000] [2608] [INFO] Using worker: sync
+Mar 04 20:56:52 srv1388219 gunicorn[2609]: [2026-03-04 20:56:52 +0000] [2609] [INFO] Booting worker with pid: 2609
+Mar 04 20:56:52 srv1388219 gunicorn[2609]: [2026-03-04 20:56:52 +0000] [2609] [ERROR] Exception in worker process
+Mar 04 20:56:52 srv1388219 gunicorn[2609]: Traceback (most recent call last):
+Mar 04 20:56:52 srv1388219 gunicorn[2609]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+Mar 04 20:56:52 srv1388219 gunicorn[2609]:     worker.init_process()
+Mar 04 20:56:52 srv1388219 gunicorn[2609]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Mar 04 20:56:52 srv1388219 gunicorn[2609]:     self.load_wsgi()
+Mar 04 20:56:52 srv1388219 gunicorn[2609]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Mar 04 20:56:52 srv1388219 gunicorn[2609]:     self.wsgi = self.app.wsgi()
+Mar 04 20:56:52 srv1388219 gunicorn[2609]:                 ^^^^^^^^^^^^^^^
+Mar 04 20:56:52 srv1388219 gunicorn[2609]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Mar 04 20:56:52 srv1388219 gunicorn[2609]:     self.callable = self.load()
+Mar 04 20:56:52 srv1388219 gunicorn[2609]:                     ^^^^^^^^^^^
+Mar 04 20:56:52 srv1388219 gunicorn[2609]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Mar 04 20:56:52 srv1388219 gunicorn[2609]:     return self.load_wsgiapp()
+Mar 04 20:56:52 srv1388219 gunicorn[2609]:            ^^^^^^^^^^^^^^^^^^^
+Mar 04 20:56:52 srv1388219 gunicorn[2609]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Mar 04 20:56:52 srv1388219 gunicorn[2609]:     return util.import_app(self.app_uri)
+Mar 04 20:56:52 srv1388219 gunicorn[2609]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 20:56:52 srv1388219 gunicorn[2609]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/util.py", line 371, in import_app
+Mar 04 20:56:52 srv1388219 gunicorn[2609]:     mod = importlib.import_module(module)
+Mar 04 20:56:52 srv1388219 gunicorn[2609]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 20:56:52 srv1388219 gunicorn[2609]:   File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+Mar 04 20:56:52 srv1388219 gunicorn[2609]:     return _bootstrap._gcd_import(name[level:], package, level)
+Mar 04 20:56:52 srv1388219 gunicorn[2609]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 20:56:52 srv1388219 gunicorn[2609]:   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Mar 04 20:56:52 srv1388219 gunicorn[2609]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Mar 04 20:56:52 srv1388219 gunicorn[2609]:   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+Mar 04 20:56:52 srv1388219 gunicorn[2609]:   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+Mar 04 20:56:52 srv1388219 gunicorn[2609]:   File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+Mar 04 20:56:52 srv1388219 gunicorn[2609]:   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+Mar 04 20:56:52 srv1388219 gunicorn[2609]:   File "/home/afida/apps/AFIDA-Watch/wsgi.py", line 1, in <module>
+Mar 04 20:56:52 srv1388219 gunicorn[2609]:     from app import app
+Mar 04 20:56:52 srv1388219 gunicorn[2609]:   File "/home/afida/apps/AFIDA-Watch/app.py", line 21
+Mar 04 20:56:52 srv1388219 gunicorn[2609]:     files = sorted(
+Mar 04 20:56:52 srv1388219 gunicorn[2609]:     ^^^^^
+Mar 04 20:56:52 srv1388219 gunicorn[2609]: IndentationError: expected an indented block after 'if' statement on line 20
+Mar 04 20:56:52 srv1388219 gunicorn[2609]: [2026-03-04 20:56:52 +0000] [2609] [INFO] Worker exiting (pid: 2609)
+Mar 04 20:56:52 srv1388219 gunicorn[2608]: [2026-03-04 20:56:52 +0000] [2608] [ERROR] Worker (pid:2609) exited with code 3
+Mar 04 20:56:52 srv1388219 gunicorn[2608]: [2026-03-04 20:56:52 +0000] [2608] [ERROR] Shutting down: Master
+Mar 04 20:56:52 srv1388219 gunicorn[2608]: [2026-03-04 20:56:52 +0000] [2608] [ERROR] Reason: Worker failed to boot.
+Mar 04 20:56:52 srv1388219 systemd[1]: [0;1;39m[0;1;31m[0;1;39mafidawatch.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAn ExecStart= process belonging to unit afidawatch.service has exited.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 3.[0m
+Mar 04 20:56:52 srv1388219 systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mafidawatch.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit afidawatch.service has entered the 'failed' state with result 'exit-code'.[0m
+Mar 04 20:56:55 srv1388219 systemd[1]: afidawatch.service: Scheduled restart job, restart counter is at 4.
+[0;38;5;245m░░ [0m[0;32mSubject: Automatic restarting of a unit has been scheduled[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAutomatic restarting of the unit afidawatch.service has been scheduled, as the result for[0m
+[0;38;5;245m░░[0m [0;32mthe configured Restart= setting for the unit.[0m
+Mar 04 20:56:55 srv1388219 systemd[1]: Started afidawatch.service - AFIDA Watch (Gunicorn).
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit afidawatch.service has finished successfully[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit afidawatch.service has finished successfully.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 6424.[0m
+Mar 04 20:56:55 srv1388219 gunicorn[2611]: [2026-03-04 20:56:55 +0000] [2611] [INFO] Starting gunicorn 21.2.0
+Mar 04 20:56:55 srv1388219 gunicorn[2611]: [2026-03-04 20:56:55 +0000] [2611] [INFO] Listening at: http://127.0.0.1:8000 (2611)
+Mar 04 20:56:55 srv1388219 gunicorn[2611]: [2026-03-04 20:56:55 +0000] [2611] [INFO] Using worker: sync
+Mar 04 20:56:55 srv1388219 gunicorn[2612]: [2026-03-04 20:56:55 +0000] [2612] [INFO] Booting worker with pid: 2612
+Mar 04 20:56:55 srv1388219 gunicorn[2612]: [2026-03-04 20:56:55 +0000] [2612] [ERROR] Exception in worker process
+Mar 04 20:56:55 srv1388219 gunicorn[2612]: Traceback (most recent call last):
+Mar 04 20:56:55 srv1388219 gunicorn[2612]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+Mar 04 20:56:55 srv1388219 gunicorn[2612]:     worker.init_process()
+Mar 04 20:56:55 srv1388219 gunicorn[2612]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Mar 04 20:56:55 srv1388219 gunicorn[2612]:     self.load_wsgi()
+Mar 04 20:56:55 srv1388219 gunicorn[2612]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Mar 04 20:56:55 srv1388219 gunicorn[2612]:     self.wsgi = self.app.wsgi()
+Mar 04 20:56:55 srv1388219 gunicorn[2612]:                 ^^^^^^^^^^^^^^^
+Mar 04 20:56:55 srv1388219 gunicorn[2612]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Mar 04 20:56:55 srv1388219 gunicorn[2612]:     self.callable = self.load()
+Mar 04 20:56:55 srv1388219 gunicorn[2612]:                     ^^^^^^^^^^^
+Mar 04 20:56:55 srv1388219 gunicorn[2612]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Mar 04 20:56:55 srv1388219 gunicorn[2612]:     return self.load_wsgiapp()
+Mar 04 20:56:55 srv1388219 gunicorn[2612]:            ^^^^^^^^^^^^^^^^^^^
+Mar 04 20:56:55 srv1388219 gunicorn[2612]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Mar 04 20:56:55 srv1388219 gunicorn[2612]:     return util.import_app(self.app_uri)
+Mar 04 20:56:55 srv1388219 gunicorn[2612]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 20:56:55 srv1388219 gunicorn[2612]:   File "/home/afida/apps/AFIDA-Watch/.venv/lib/python3.12/site-packages/gunicorn/util.py", line 371, in import_app
+Mar 04 20:56:55 srv1388219 gunicorn[2612]:     mod = importlib.import_module(module)
+Mar 04 20:56:55 srv1388219 gunicorn[2612]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 20:56:55 srv1388219 gunicorn[2612]:   File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+Mar 04 20:56:55 srv1388219 gunicorn[2612]:     return _bootstrap._gcd_import(name[level:], package, level)
+Mar 04 20:56:55 srv1388219 gunicorn[2612]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mar 04 20:56:55 srv1388219 gunicorn[2612]:   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Mar 04 20:56:55 srv1388219 gunicorn[2612]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Mar 04 20:56:55 srv1388219 gunicorn[2612]:   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+Mar 04 20:56:55 srv1388219 gunicorn[2612]:   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+Mar 04 20:56:55 srv1388219 gunicorn[2612]:   File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+Mar 04 20:56:55 srv1388219 gunicorn[2612]:   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+Mar 04 20:56:55 srv1388219 gunicorn[2612]:   File "/home/afida/apps/AFIDA-Watch/wsgi.py", line 1, in <module>
+Mar 04 20:56:55 srv1388219 gunicorn[2612]:     from app import app
+Mar 04 20:56:55 srv1388219 gunicorn[2612]:   File "/home/afida/apps/AFIDA-Watch/app.py", line 21
+Mar 04 20:56:55 srv1388219 gunicorn[2612]:     files = sorted(
+Mar 04 20:56:55 srv1388219 gunicorn[2612]:     ^^^^^
+Mar 04 20:56:55 srv1388219 gunicorn[2612]: IndentationError: expected an indented block after 'if' statement on line 20
+Mar 04 20:56:55 srv1388219 gunicorn[2612]: [2026-03-04 20:56:55 +0000] [2612] [INFO] Worker exiting (pid: 2612)
+Mar 04 20:56:55 srv1388219 gunicorn[2611]: [2026-03-04 20:56:55 +0000] [2611] [ERROR] Worker (pid:2612) exited with code 3
+Mar 04 20:56:55 srv1388219 gunicorn[2611]: [2026-03-04 20:56:55 +0000] [2611] [ERROR] Shutting down: Master
+Mar 04 20:56:55 srv1388219 gunicorn[2611]: [2026-03-04 20:56:55 +0000] [2611] [ERROR] Reason: Worker failed to boot.
+Mar 04 20:56:55 srv1388219 systemd[1]: [0;1;39m[0;1;31m[0;1;39mafidawatch.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAn ExecStart= process belonging to unit afidawatch.service has exited.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 3.[0m
+Mar 04 20:56:55 srv1388219 systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mafidawatch.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit afidawatch.service has entered the 'failed' state with result 'exit-code'.[0m
+Mar 04 20:56:58 srv1388219 systemd[1]: afidawatch.service: Scheduled restart job, restart counter is at 5.
+[0;38;5;245m░░ [0m[0;32mSubject: Automatic restarting of a unit has been scheduled[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAutomatic restarting of the unit afidawatch.service has been scheduled, as the result for[0m
+[0;38;5;245m░░[0m [0;32mthe configured Restart= setting for the unit.[0m
+Mar 04 20:56:58 srv1388219 systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mafidawatch.service: Start request repeated too quickly.[0m
+Mar 04 20:56:58 srv1388219 systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mafidawatch.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit afidawatch.service has entered the 'failed' state with result 'exit-code'.[0m
+Mar 04 20:56:58 srv1388219 systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start afidawatch.service - AFIDA Watch (Gunicorn).[0m
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit afidawatch.service has failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit afidawatch.service has finished with a failure.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 6538 and the job result is failed.[0m
+Mar 04 20:58:31 srv1388219 systemd[1]: Started afidawatch.service - AFIDA Watch (Gunicorn).
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit afidawatch.service has finished successfully[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit afidawatch.service has finished successfully.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 6652.[0m

@@ -1,0 +1,6 @@
+Owner Id,Parcel Id,State,County,Country,Country Code,Principal Place of Business,DISCREPANCY_TYPE
+3749,5881,Maryland,Montgomery,IRAN (ISLAMIC REPUBLIC OF),364,0.0,string_code_mismatch
+2809,4657,Maryland,Montgomery,IRAN (ISLAMIC REPUBLIC OF),364,0.0,string_code_mismatch
+3935,6156,New York,Orange,IRAN (ISLAMIC REPUBLIC OF),364,0.0,string_code_mismatch
+5251,8210,North Carolina,Nash,IRAN (ISLAMIC REPUBLIC OF),364,0.0,string_code_mismatch
+12973,27006,Virginia,Rockingham,RUSSIAN FEDERATION,643,643.0,string_code_mismatch
