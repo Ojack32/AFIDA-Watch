@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="deliverables-container">
+    <h2>What You Get — Tier by Tier</h2>
+    
+    <h3>Tier 1: Auditable Intelligence Report</h3>
+    <p class="price">$15K–$40K per year</p>
+    <div class="deliverable-list">
+        <h4>Includes:</h4>
+        <ul>
+            <li>Comprehensive AFIDA analysis report (PDF)</li>
+            <li>Flag Specification v1.0</li>
+            <li>Scoring Specification v1.0</li>
+            <li>Audit & Challenge Pack</li>
+            <li>Headline metrics and tier breakdown</li>
+            <li>Trend analysis (year-over-year if available)</li>
+            <li>Country code reconciliation report</li>
+        </ul>
+    </div>
+    
+    <h3>Tier 2: Triage Feed (Recommended)</h3>
+    <p class="price">$40K–$120K per year</p>
+    <div class="deliverable-list">
+        <h4>Everything in Tier 1, plus:</h4>
+        <ul>
+            <li>Record-level triage feed (CSV format)</li>
+            <li>Fields: State, County, Owner, Country, RISK_TIER, RISK_SCORE, REASON_CODES, AGENCY_ROUTING</li>
+            <li>Quarterly or monthly analytic refresh (re-scoring + backfill + corrections) cadence (your choice)</li>
+            <li>API-ready format for integration</li>
+            <li>Download link to latest feed</li>
+            <li>Version control and change logs</li>
+        </ul>
+    </div>
+    
+    <h3>Tier 3: Online Triage Map</h3>
+    <p class="price">$120K–$250K per year</p>
+    <div class="deliverable-list">
+        <h4>Everything in Tier 2, plus:</h4>
+        <ul>
+            <li>Password-protected portal access</li>
+            <li>County/state choropleth visualization</li>
+            <li>Interactive filters (State, County, Tier, Flags)</li>
+            <li>Workload prioritization dashboard</li>
+            <li>Persistent audit stamp on all outputs</li>
+            <li>CSV export of filtered results</li>
+            <li>Monthly portal support and updates</li>
+        </ul>
+    </div>
+    
+    <h3>Optional Add-on: Monthly Analytic Refresh</h3>
+    <p class="price">+$25K–$75K per year</p>
+    <p>All tiers default to quarterly analytic refresh. Upgrade to monthly re-scoring, backfill, and corrections processing for an additional annual fee.</p>
+    
+    <h3>Separate Service: Parcel Verification & Ground-Truth Enrichment</h3>
+    <p>See <a href="/parcel-verification">Parcel Verification</a> page for details on verified location services.</p>
+    
+    <div class="audit-details">
+        <h3>Audit & Challenge Pack Contents</h3>
+        <ul>
+            <li>Flag Specification v1.0 (complete definitions)</li>
+            <li>Scoring Specification v1.0 (weights, thresholds, gating)</li>
+            <li>Country code reconciliation (5 discrepant records explained)</li>
+            <li>Flag coverage table (counts, rates, rationale)</li>
+            <li>Reproducibility runbook (how to regenerate outputs)</li>
+            <li>Dataset hash and version control artifacts</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}

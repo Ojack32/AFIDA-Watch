@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="pricing-container">
+    <h2>AFIDA-Watch Pricing</h2>
+    <p class="pricing-intro">Annual subscriptions with optional quarterly invoicing. All tiers include audit stamp and reproducibility guarantee.</p>
+    
+    <div class="pricing-grid">
+        <div class="pricing-card">
+            <h3>Tier 1</h3>
+            <p class="tier-name">Auditable Intelligence Report</p>
+            <p class="price-range">$15K–$40K/year</p>
+            <ul class="features">
+                <li>✓ Comprehensive AFIDA report (PDF)</li>
+                <li>✓ Flag Specification v1.0</li>
+                <li>✓ Scoring Specification v1.0</li>
+                <li>✓ Audit & Challenge Pack</li>
+                <li>✓ Headline metrics</li>
+                <li>✓ Country reconciliation</li>
+            </ul>
+            <p class="tier-note">Best for: Policy research, regulatory compliance, one-time analysis</p>
+        </div>
+        
+        <div class="pricing-card featured">
+            <h3>Tier 2</h3>
+            <p class="tier-name">Triage Feed (Recommended)</p>
+            <p class="price-range">$40K–$120K/year</p>
+            <ul class="features">
+                <li>✓ Everything in Tier 1</li>
+                <li>✓ Record-level triage feed (CSV)</li>
+                <li>✓ Quarterly or monthly analytic refresh (re-scoring + backfill + corrections)</li>
+                <li>✓ API-ready format</li>
+                <li>✓ Version control</li>
+                <li>✓ Change logs</li>
+            </ul>
+            <p class="tier-note">Best for: Defense contractors, CFIUS analysts, operational triage</p>
+            <p style="color: green; font-weight: bold;">MOST POPULAR</p>
+        </div>
+        
+        <div class="pricing-card">
+            <h3>Tier 3</h3>
+            <p class="tier-name">Online Triage Map</p>
+            <p class="price-range">$120K–$250K/year</p>
+            <ul class="features">
+                <li>✓ Everything in Tier 2</li>
+                <li>✓ Password-protected portal</li>
+                <li>✓ County/state choropleth map</li>
+                <li>✓ Interactive filters</li>
+                <li>✓ Workload dashboard</li>
+                <li>✓ CSV export</li>
+            </ul>
+            <p class="tier-note">Best for: Government agencies, multi-team coordination, real-time monitoring</p>
+        </div>
+    </div>
+    
+    <div class="add-ons-section">
+        <h3>Optional Add-ons</h3>
+        
+        <div class="add-on-card">
+            <h4>Monthly Analytic Refresh</h4>
+            <p class="price">+$25K–$75K/year</p>
+            <p>Upgrade from quarterly to monthly data updates. Recommended for fast-moving threat environments.</p>
+        </div>
+        
+        <div class="add-on-card">
+            <h4>Parcel Verification & Ground-Truth Service</h4>
+            <p class="price">Time & Materials (see Parcel Verification page)</p>
+            <p>Convert high-tier records into verified parcel locations with assessor evidence. Separate service line with own SLA.</p>
+        </div>
+    </div>
+    
+    <div class="pricing-faq">
+        <h3>Pricing FAQ</h3>
+        
+        <div class="faq-item">
+            <h4>What's included in the "Audit & Challenge Pack"?</h4>
+            <p>Complete flag and scoring specifications, country code reconciliation, flag coverage analysis, and a reproducibility runbook so you can validate our methodology independently.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h4>Can I switch tiers mid-year?</h4>
+            <p>Yes. Contact us to discuss tier upgrades and prorated billing.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h4>What's the difference between quarterly and monthly refresh?</h4>
+            <p>Quarterly: 4 updates per year. Monthly: 12 updates per year. Monthly recommende
+d for fast-moving threat environments.
+        </div>
+        
+        <div class="faq-item">
+            <h4>Do you offer discounts for multi-year commitments?</h4>
+            <p>Yes. Contact us for volume and multi-year pricing.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h4>What if I need custom analysis beyond these tiers?</h4>
+            <p>We offer custom engagements. Contact us to discuss your specific needs.</p>
+        </div>
+    </div>
+    
+    <div class="cta-section">
+        <h2>Ready to Get Started?</h2>
+        <a href="/contact" class="btn btn-primary">Request a Quote</a>
+        <a href="/download-feed" class="btn btn-secondary">Download Sample Feed</a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="hero">
+    <h2>AFIDA-Watch: Auditable Agricultural Land Risk Triage</h2>
+    <p>Foreign adversaries are acquiring U.S. agricultural land near military installations. AFIDA-Watch converts AFIDA holdings data into auditable, actionable triage for interagency review.</p>
+</div>
+
+<div class="metrics-grid">
+    <div class="metric-card">
+        <h3>Total Records</h3>
+        <p class="metric-value">{{ metrics.total_records | int }}</p>
+    </div>
+    <div class="metric-card">
+        <h3>CRITICAL</h3>
+        <p class="metric-value critical">{{ metrics.critical }}</p>
+    </div>
+    <div class="metric-card">
+        <h3>HIGH</h3>
+        <p class="metric-value high">{{ metrics.high }}</p>
+    </div>
+    <div class="metric-card">
+        <h3>MEDIUM</h3>
+        <p class="metric-value medium">{{ metrics.medium }}</p>
+    </div>
+    <div class="metric-card">
+        <h3>LOW</h3>
+        <p class="metric-value low">{{ metrics.low }}</p>
+    </div>
+</div>
+
+<div class="products-section">
+    <h2>Three Product Tiers</h2>
+    
+    <div class="product-card">
+        <h3>Tier 1: Auditable Intelligence Report</h3>
+        <p class="price">$15K–$40K per year</p>
+        <ul>
+            <li>Comprehensive AFIDA analysis report (PDF)</li>
+            <li>Flag Specification v1.0 + Scoring Specification v1.0</li>
+            <li>Audit & Challenge Pack</li>
+            <li>Headline metrics and trend analysis</li>
+        </ul>
+    </div>
+    
+    <div class="product-card">
+        <h3>Tier 2: Triage Feed (Recommended)</h3>
+        <p class="price">$40K–$120K per year</p>
+        <ul>
+            <li>Everything in Tier 1, plus:</li>
+            <li>Record-level triage feed (CSV)</li>
+            <li>Quarterly or monthly analytic refresh (re-scoring + backfill + corrections)</li>
+            <li><a href="/download-feed">Download Sample Feed</a></li>
+        </ul>
+    </div>
+    
+    <div class="product-card">
+        <h3>Tier 3: Online Triage Map</h3>
+        <p class="price">$120K–$250K per year</p>
+        <ul>
+            <li>Everything in Tier 2, plus:</li>
+            <li>Password-protected portal</li>
+            <li>County/state choropleth visualization</li>
+            <li>Interactive filters and workload prioritization</li>
+        </ul>
+    </div>
+</div>
+
+<div class="cta-section">
+    <a href="/contact" class="btn btn-primary">Request a Quote</a>
+    <a href="/pricing" class="btn btn-secondary">View Pricing</a>
+</div>
+{% endblock %}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFIDA-Watch Triage Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="audit-stamp">
+        Dataset: {{ audit.dataset }} | MD5: {{ audit.md5 }} | FlagSpec: {{ audit.flag_spec_version }} | ScoringSpec: {{ audit.scoring_spec_version }}
+    </div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">AFIDA-Watch</h1>
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/map">Map</a></li>
+                <li><a href="/methods">Methods</a></li>
+                <li><a href="/deliverables">Deliverables</a></li>
+                <li><a href="/pricing">Pricing</a></li>
+                <li><a href="/parcel-verification">Parcel Verification</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+    
+    <footer>
+        <p>AFIDA-Watch © 2026 | Classification: UNCLASSIFIED // FOR OFFICIAL USE ONLY</p>
+        <p style="font-size: 0.9em; color: #666;">Parcel-exact site visit recommendations require Verified Location evidence and QA PASS.</p>
+    </footer>
+</body>
+</html>

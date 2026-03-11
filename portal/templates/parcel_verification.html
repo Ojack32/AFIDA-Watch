@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="parcel-verification-container">
+    <h2>Parcel Verification & Site-Visit Enablement</h2>
+    <p class="subtitle">Separate staffed, insured, credentialed service for verified parcel locations.</p>
+    
+    <div class="verification-intro">
+        <p><strong>AFIDA Parcel Id is not a dispatchable location.</strong> AFIDA-Watch provides county/state triage. For site visits, field operations, or enforcement referrals, you need verified parcel geometry and assessor evidence.</p>
+        <p>This service converts high-tier AFIDA records into verified parcel locations with full chain of custody.</p>
+    </div>
+    
+    <h3>What We Verify</h3>
+    <ul>
+        <li>AFIDA Parcel Id → County APN / Tax Map ID</li>
+        <li>County APN → Verified parcel geometry (polygon or centroid)</li>
+        <li>Geometry → Assessor/recorder evidence links</li>
+        <li>All with VerificationConfidence rating (High/Medium/Low)</li>
+    </ul>
+    
+    <h3>Pricing Model — Time & Materials (T&M)</h3>
+    
+    <div class="pricing-breakdown">
+        <h4>Labor Rates</h4>
+        <table class="spec-table">
+            <tr>
+                <th>Role</th>
+                <th>Hourly Rate</th>
+            </tr>
+            <tr>
+                <td>Analyst (county records research)</td>
+                <td>$125–$185/hr</td>
+            </tr>
+            <tr>
+                <td>Senior Analyst / QA Lead</td>
+                <td>$185–$275/hr</td>
+            </tr>
+            <tr>
+                <td>On-site field work (verification visits)</td>
+                <td>$175–$300/hr</td>
+            </tr>
+        </table>
+        
+        <h4>Travel & Expenses</h4>
+        <ul>
+            <li>Travel: Reimbursed at cost with receipts</li>
+            <li>Trip Management Fee: Either 10–15% handling fee OR fixed $500–$1,500 per trip</li>
+            <li>Records Fees: Pass-through with NTE cap ($200 per parcel unless pre-approved)</li>
+        </ul>
+    </div>
+    
+    <h3>Engagement Models</h3>
+    
+    <div class="engagement-card">
+        <h4>Per-Record Verification</h4>
+        <p class="price">$500–$1,000 per verified parcel</p>
+        <p>Typical turnaround: 3–5 business days per record. Includes APN lookup, geometry, assessor link, and VerificationConfidence rating.</p>
+    </div>
+    
+    <div class="engagement-card">
+        <h4>Subscription Verification Queue</h4>
+        <p class="price">$2K–$5K/month</p>
+        <p>Verify all CRITICAL records + top 50 HIGH records monthly. Recurring monthly queue with priority turnaround.</p>
+    </div>
+    
+    <div class="engagement-card">
+        <h4>Managed Regional Service</h4>
+        <p class="price">$25K–$50K/quarter</p>
+        <p>Statewide or multi-county managed service. Includes on-site field verification, ongoing monitoring, and assessor relationship management.</p>
+    </div>
+    
+    <h3>Important Disclaimers</h3>
+    <div class="disclaimer-box">
+        <ul>
+            <li><strong>Unverified records are triage-only and not dispatchable.</strong></li>
+            <li>No travel or third-party costs incurred without client-direct booking or pre-funded reimbursables.</li>
+            <li>Verification service is separate from AFIDA-Watch core product and has its own SLA.</li>
+            <li>Field work requires client coordination and access permissions.</li>
+            <li>Verified Location QA PASS is required for any site-visit recommendation.</li>
+        </ul>
+    </div>
+    
+    <div class="cta-section">
+        <h2>Ready to Verify?</h2>
+        <a href="/contact" class="btn btn-primary">Request Verification Quote</a>
+    </div>
+</div>
+{% endblock %}

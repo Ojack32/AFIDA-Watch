@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="contact-container">
+    <h2>Contact & Pilot Intake</h2>
+    <p>Interested in AFIDA-Watch? Fill out the form below and we'll be in touch within 24 hours.</p>
+    
+    <form class="contact-form" method="POST" action="/submit-contact">
+        <div class="form-group">
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="organization">Organization *</label>
+            <input type="text" id="organization" name="organization" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="buyer-type">Buyer Type *</label>
+            <select id="buyer-type" name="buyer_type" required>
+                <option value="">Select...</option>
+                <option value="prime">Defense Contractor (Prime)</option>
+                <option value="dod">DoD / Military</option>
+                <option value="state">State Government</option>
+                <option value="policy">Policy / Research Org</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="states">States of Interest (comma-separated)</label>
+            <input type="text" id="states" name="states" placeholder="e.g., ND, SD, MT, CA">
+        </div>
+        
+        <div class="form-group">
+            <label for="cadence">Preferred Update Cadence *</label>
+            <select id="cadence" name="cadence" required>
+                <option value="">Select...</option>
+                <option value="quarterly">Quarterly</option>
+                <option value="monthly">Monthly</option>
+                <option value="flexible">Flexible</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="tier">Interested Tier *</label>
+            <select id="tier" name="tier" required>
+                <option value="">Select...</option>
+                <option value="tier1">Tier 1: Report Only</option>
+                <option value="tier2">Tier 2: Report + Feed</option>
+                <option value="tier3">Tier 3: Report + Feed + Map</option>
+                <option value="unsure">Not sure yet</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="map-needed">
+                <input type="checkbox" id="map-needed" name="map_needed">
+                Need online map visualization?
+            </label>
+        </div>
+        
+        <div class="form-group">
+            <label for="verification-interest">
+                <input type="checkbox" id="verification-interest" name="verification_interest">
+                Interested in parcel verification add-on?
+            </label>
+        </div>
+        
+        <div class="form-group">
+            <label for="message">Additional Notes</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us about your use case..."></textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    
+    <div class="contact-info">
+        <h3>Direct Contact</h3>
+        <p>Email: <strong>info@afida-watch.com</strong></p>
+        <p>Phone: <strong>(202) XXX-XXXX</strong></p>
+        <p>Classification: UNCLASSIFIED // FOR OFFICIAL USE ONLY</p>
+    </div>
+</div>
+{% endblock %}
